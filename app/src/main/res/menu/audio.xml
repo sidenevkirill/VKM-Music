@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/audio_cache"
+        android:title="@string/save" />
+    <item
+        android:id="@+id/audio_download"
+        android:title="@string/downloadmusic" />
+    <item
+        android:id="@+id/audio_delete"
+        android:title="@string/add" />
+    <item
+        android:id="@+id/audio_search_artist"
+        android:title="@string/findartist" />
+    <item
+        android:id="@+id/audio_add_next"
+        android:title="@string/playNext"/>
+
+</menu>

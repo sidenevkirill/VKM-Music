@@ -1,0 +1,128 @@
+TASK com.mascotworld.vkaudiomanager id=1854
+  ACTIVITY com.mascotworld.vkaudiomanager/.ListActivity b0dca9c pid=11725
+    Local FragmentActivity ee13d98 State:
+      mCreated=truemResumed=true mStopped=false mReallyStopped=false
+      mLoadersStarted=true
+    FragmentManager misc state:
+      mHost=android.support.v4.app.FragmentActivity$HostCallbacks@84ca96d
+      mContainer=android.support.v4.app.FragmentActivity$HostCallbacks@84ca96d
+      mCurState=5 mStateSaved=false mDestroyed=false
+    View Hierarchy:
+      com.android.internal.policy.DecorView{b9189a2 V.E..... ... 0,0-720,1280}
+        android.widget.LinearLayout{a332633 V.E..... ... 0,0-720,1280}
+          android.view.ViewStub{bdcfdf0 G.E..... ... 0,0-0,0 #10203f3 android:id/action_mode_bar_stub}
+          android.widget.FrameLayout{a176f69 V.E..... ... 0,48-720,1280}
+            android.support.v7.widget.FitWindowsLinearLayout{4229dee V.E..... ... 0,0-720,1232 #7f0e0097 app:id/action_bar_root}
+              android.support.v7.widget.ViewStubCompat{2eff28f G.E..... ... 0,0-0,0 #7f0e0098 app:id/action_mode_bar_stub}
+              android.support.v7.widget.ContentFrameLayout{5ac091c V.E..... ... 0,0-720,1232 #1020002 android:id/content}
+                android.widget.RelativeLayout{cae9925 V.E..... ... 0,0-720,1232}
+                  android.widget.TabHost{9eaafa VFE..... ... 0,0-720,1232 #7f0e00d8 app:id/tabhost}
+                    android.widget.LinearLayout{30328ab V.E..... ... 0,0-720,1232}
+                      android.widget.TabWidget{dfe9b08 V.ED.... ... 0,0-720,112 #1020013 android:id/tabs}
+                        android.widget.LinearLayout{8d4a2a1 VFE...C. ... 0,0-360,112}
+                          android.support.v7.widget.AppCompatImageView{59c7cc6 G.ED.... ... 0,0-0,0 #1020006 android:id/icon}
+                          android.support.v7.widget.AppCompatTextView{8c9a487 V.ED.... ... 137,0-223,112 #1020016 android:id/title}
+                        android.widget.LinearLayout{5665fb4 VFE...C. .S. 360,0-720,112}
+                          android.support.v7.widget.AppCompatImageView{6f7c7dd G.ED.... .S. 0,0-0,0 #1020006 android:id/icon}
+                          android.support.v7.widget.AppCompatTextView{8539f52 V.ED.... .S. 118,0-242,112 #1020016 android:id/title}
+                      android.widget.FrameLayout{1920223 V.E..... ... 0,112-720,1232 #1020011 android:id/tabcontent}
+                        android.widget.LinearLayout{1e3c320 G.E..... ... 0,0-720,1120 #7f0e00d9 app:id/tab1}
+                          android.support.v7.widget.RecyclerView{e2e04d9 VFED.... ... 0,0-720,1120 #7f0e00da app:id/recMusic}
+                            android.support.v7.widget.CardView{7e85e9e V.E...C. ... 0,0-720,100 #7f0e00f8 app:id/cv}
+                              android.widget.RelativeLayout{6f89d7f V.E..... ... 0,0-720,100}
+                                android.support.v7.widget.AppCompatImageView{b66f889 V.ED.... ... 20,0-120,100 #7f0e00f9 app:id/pic}
+                                android.support.v7.widget.AppCompatTextView{711f14c V.ED.... ... 140,14-624,51 #7f0e0082 app:id/title}
+                                android.support.v7.widget.AppCompatTextView{6f11595 V.ED.... ... 140,48-233,86 #7f0e00fa app:id/artist}
+                                android.support.v7.widget.AppCompatImageButton{f77c6aa VFED..C. ... 624,2-720,98 #7f0e00fb app:id/settings_item}
+                            android.support.v7.widget.CardView{603929b V.E...C. ... 0,105-720,205 #7f0e00f8 app:id/cv}
+                              android.widget.RelativeLayout{512d638 V.E..... ... 0,0-720,100}
+                                android.support.v7.widget.AppCompatImageView{b481a01 V.ED.... ... 20,0-120,100 #7f0e00f9 app:id/pic}
+                                android.support.v7.widget.AppCompatTextView{d9a7611 V.ED.... ... 140,14-624,52 #7f0e0082 app:id/title}
+                                android.support.v7.widget.AppCompatTextView{ce3a376 V.ED.... ... 140,48-244,86 #7f0e00fa app:id/artist}
+                                android.support.v7.widget.AppCompatImageButton{bfebd77 VFED..C. ... 624,2-720,98 #7f0e00fb app:id/settings_item}
+                            android.support.v7.widget.CardView{a3b1de4 V.E...C. ... 0,210-720,310 #7f0e00f8 app:id/cv}
+                              android.widget.RelativeLayout{9f624d V.E..... ... 0,0-720,100}
+                                android.support.v7.widget.AppCompatImageView{d87c08e V.ED.... ... 20,0-120,100 #7f0e00f9 app:id/pic}
+                                android.support.v7.widget.AppCompatTextView{85e8102 V.ED.... ... 140,14-624,52 #7f0e0082 app:id/title}
+                                android.support.v7.widget.AppCompatTextView{517ba13 V.ED.... ... 140,48-244,86 #7f0e00fa app:id/artist}
+                                android.support.v7.widget.AppCompatImageButton{37e3450 VFED..C. ... 624,2-720,98 #7f0e00fb app:id/settings_item}
+                            android.support.v7.widget.CardView{68cd649 V.E...C. ... 0,315-720,415 #7f0e00f8 app:id/cv}
+                              android.widget.RelativeLayout{8b7ab4e V.E..... ... 0,0-720,100}
+                                android.support.v7.widget.AppCompatImageView{b1501b7 V.ED.... ... 20,0-120,100 #7f0e00f9 app:id/pic}
+                                android.support.v7.widget.AppCompatTextView{8b9e46f V.ED.... ... 140,14-624,52 #7f0e0082 app:id/title}
+                                android.support.v7.widget.AppCompatTextView{79a457c V.ED.... ... 140,48-244,86 #7f0e00fa app:id/artist}
+                                android.support.v7.widget.AppCompatImageButton{7c38e05 VFED..C. ... 624,2-720,98 #7f0e00fb app:id/settings_item}
+                            android.support.v7.widget.CardView{672e5a V.E...C. ... 0,420-720,520 #7f0e00f8 app:id/cv}
+                              android.widget.RelativeLayout{faa588b V.E..... ... 0,0-720,100}
+                                android.support.v7.widget.AppCompatImageView{cb6ace1 V.ED.... ... 20,0-120,100 #7f0e00f9 app:id/pic}
+                                android.support.v7.widget.AppCompatTextView{9043d68 V.ED.... ... 140,14-624,51 #7f0e0082 app:id/title}
+                                android.support.v7.widget.AppCompatTextView{7f40581 V.ED.... ... 140,48-244,86 #7f0e00fa app:id/artist}
+                                android.support.v7.widget.AppCompatImageButton{f59d626 VFED..C. ... 624,2-720,98 #7f0e00fb app:id/settings_item}
+                            android.support.v7.widget.CardView{fe3f267 V.E...C. ... 0,525-720,625 #7f0e00f8 app:id/cv}
+                              android.widget.RelativeLayout{a93c814 V.E..... ... 0,0-720,100}
+                                android.support.v7.widget.AppCompatImageView{b4c70af V.ED.... ... 20,0-120,100 #7f0e00f9 app:id/pic}
+                                android.support.v7.widget.AppCompatTextView{b5a78bd V.ED.... ... 140,14-624,52 #7f0e0082 app:id/title}
+                                android.support.v7.widget.AppCompatTextView{57d2eb2 V.ED.... ... 140,48-228,86 #7f0e00fa app:id/artist}
+                                android.support.v7.widget.AppCompatImageButton{a334e03 VFED..C. ... 624,2-720,98 #7f0e00fb app:id/settings_item}
+                            android.support.v7.widget.CardView{2ef5180 V.E...C. ... 0,630-720,730 #7f0e00f8 app:id/cv}
+                              android.widget.RelativeLayout{3bae3b9 V.E..... ... 0,0-720,100}
+                                android.support.v7.widget.AppCompatImageView{b3e7790 V.ED.... ... 20,0-120,100 #7f0e00f9 app:id/pic}
+                                android.support.v7.widget.AppCompatTextView{20b83fe V.ED.... ... 140,14-624,52 #7f0e0082 app:id/title}
+                                android.support.v7.widget.AppCompatTextView{592c75f V.ED.... ... 140,48-277,86 #7f0e00fa app:id/artist}
+                                android.support.v7.widget.AppCompatImageButton{ab805ac VFED..C. ... 624,2-720,98 #7f0e00fb app:id/settings_item}
+                            android.support.v7.widget.CardView{11d0275 V.E...C. ... 0,735-720,835 #7f0e00f8 app:id/cv}
+                              android.widget.RelativeLayout{b97e20a V.E..... ... 0,0-720,100}
+                                android.support.v7.widget.AppCompatImageView{298bcef V.ED.... ... 20,0-120,100 #7f0e00f9 app:id/pic}
+                                android.support.v7.widget.AppCompatTextView{4467a7b V.ED.... ... 140,14-624,52 #7f0e0082 app:id/title}
+                                android.support.v7.widget.AppCompatTextView{175d098 V.ED.... ... 140,48-199,86 #7f0e00fa app:id/artist}
+                                android.support.v7.widget.AppCompatImageButton{24850f1 VFED..C. ... 624,2-720,98 #7f0e00fb app:id/settings_item}
+                            android.support.v7.widget.CardView{cda14d6 V.E...C. ... 0,840-720,940 #7f0e00f8 app:id/cv}
+                              android.widget.RelativeLayout{eb84357 V.E..... ... 0,0-720,100}
+                                android.support.v7.widget.AppCompatImageView{1ed0839 V.ED.... ... 20,0-120,100 #7f0e00f9 app:id/pic}
+                                android.support.v7.widget.AppCompatTextView{5435e44 V.ED.... ... 140,14-624,52 #7f0e0082 app:id/title}
+                                android.support.v7.widget.AppCompatTextView{1000b2d V.ED.... ... 140,48-354,86 #7f0e00fa app:id/artist}
+                                android.support.v7.widget.AppCompatImageButton{23aa862 VFED..C. ... 624,2-720,98 #7f0e00fb app:id/settings_item}
+                            android.support.v7.widget.CardView{13bdf3 V.E...C. ... 0,945-720,1045 #7f0e00f8 app:id/cv}
+                              android.widget.RelativeLayout{93a1ab0 V.E..... ... 0,0-720,100}
+                                android.support.v7.widget.AppCompatImageView{aee0253 V.ED.... ... 20,0-120,100 #7f0e00f9 app:id/pic}
+                                android.support.v7.widget.AppCompatTextView{5ff2d29 V.ED.... ... 140,14-624,52 #7f0e0082 app:id/title}
+                                android.support.v7.widget.AppCompatTextView{41ee8ae V.ED.... ... 140,48-271,86 #7f0e00fa app:id/artist}
+                                android.support.v7.widget.AppCompatImageButton{a2464f VFED..C. ... 624,2-720,98 #7f0e00fb app:id/settings_item}
+                            android.support.v7.widget.CardView{69e31dc V.E...C. ... 0,1050-720,1150 #7f0e00f8 app:id/cv}
+                              android.widget.RelativeLayout{b472e5 V.E..... ... 0,0-720,100}
+                                android.support.v7.widget.AppCompatImageView{70a8571 V.ED.... ... 20,0-120,100 #7f0e00f9 app:id/pic}
+                                android.support.v7.widget.AppCompatTextView{9f4e1ba V.ED.... ... 140,14-624,52 #7f0e0082 app:id/title}
+                                android.support.v7.widget.AppCompatTextView{9e6f86b V.ED.... ... 140,48-170,86 #7f0e00fa app:id/artist}
+                                android.support.v7.widget.AppCompatImageButton{4ca8fc8 VFED..C. ... 624,2-720,98 #7f0e00fb app:id/settings_item}
+                        android.widget.LinearLayout{ebe5861 V.E..... ... 0,0-720,1120 #7f0e00db app:id/tab2}
+                          android.support.v7.widget.RecyclerView{1ff5f86 VFED.... F.. 0,0-720,1120 #7f0e00dc app:id/recPopul}
+                  android.widget.ProgressBar{7ab047 I.ED.... ... 320,576-400,656 #7f0e00dd app:id/progressBar2}
+        android.view.View{3dce074 V.ED.... ... 0,0-720,48 #102002f android:id/statusBarBackground}
+
+  ACTIVITY com.mascotworld.vkaudiomanager/.MainActivity 9c5db1f pid=11725
+    Local FragmentActivity f0ede78 State:
+      mCreated=truemResumed=false mStopped=true mReallyStopped=true
+      mLoadersStarted=true
+    FragmentManager misc state:
+      mHost=android.support.v4.app.FragmentActivity$HostCallbacks@f27199d
+      mContainer=android.support.v4.app.FragmentActivity$HostCallbacks@f27199d
+      mCurState=2 mStateSaved=true mDestroyed=false
+    View Hierarchy:
+      com.android.internal.policy.DecorView{9e1ee12 I.E..... ... 0,0-720,1280}
+        android.widget.LinearLayout{fa809e3 V.E..... ... 0,0-720,1280}
+          android.view.ViewStub{6218fe0 G.E..... ... 0,0-0,0 #10203f3 android:id/action_mode_bar_stub}
+          android.widget.FrameLayout{d60b299 V.E..... ... 0,48-720,1280}
+            android.support.v7.widget.FitWindowsLinearLayout{3ecd95e V.E..... ... 0,0-720,1232 #7f0e0097 app:id/action_bar_root}
+              android.support.v7.widget.ViewStubCompat{2c7613f G.E..... ... 0,0-0,0 #7f0e0098 app:id/action_mode_bar_stub}
+              android.support.v7.widget.ContentFrameLayout{43fca0c V.E..... ... 0,0-720,1232 #1020002 android:id/content}
+                android.widget.RelativeLayout{df55 V.E..... ... 0,0-720,1232}
+                  android.support.v7.widget.AppCompatButton{5292d6a VFED..C. ... 60,748-660,844 #7f0e00ab app:id/login}
+                  android.support.design.widget.TextInputLayout{85ad25b V.ED.... ... 60,522-660,635 #7f0e00ad app:id/phonemail}
+                    android.support.design.widget.TextInputEditText{8257af8 VFED..CL F.. 0,22-600,113 #7f0e00ae app:id/phonemail1}
+                  android.widget.RelativeLayout{73d1bd1 V.E..... ... 0,0-720,522}
+                    android.support.v7.widget.AppCompatImageView{824b636 V.ED.... ... 260,161-460,361 #7f0e00af app:id/imageView}
+                  android.support.design.widget.TextInputLayout{aea3937 V.ED.... ... 60,635-660,748 #7f0e00ac app:id/password}
+                    android.support.design.widget.TextInputEditText{ab34ea4 VFED..CL ... 0,22-650,113 #7f0e00b1 app:id/password1}
+                  android.support.v7.widget.AppCompatTextView{726a40d V.ED.... ... 360,597-360,635 #7f0e00b0 app:id/textView5}
+                  android.support.v7.widget.AppCompatButton{7dffc2 VFED..C. ... 60,1136-660,1232 #7f0e00b2 app:id/signin}
+        android.view.View{b9f31d3 V.ED.... ... 0,0-720,48 #102002f android:id/statusBarBackground}

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/accent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_settings"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp"
+            app:navigationIcon="@drawable/arrow_left"
+             />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="70dp"
+            android:text="Основные"
+            android:textColor="#4780e8" />
+
+        <RelativeLayout
+            android:id="@+id/rv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="37dp"
+            android:paddingBottom="10dp"
+            android:onClick="Click"
+            android:layout_below="@id/toolbar_settings">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000000"
+                android:background="@drawable/tune" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="60dp"
+                android:textColor="#000000"
+                android:text="Общие" />
+
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/rv2"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="60dp"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/rv1"
+            android:background="#26000000" />
+
+
+        <RelativeLayout
+            android:id="@+id/rv4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:layout_below="@id/rv2">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000000"
+                android:background="@drawable/bell_outline" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="60dp"
+                android:textColor="#000000"
+                android:text="Уведомления" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/rv3"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="60dp"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/rv4"
+            android:background="#26000000" />
+
+
+        <RelativeLayout
+            android:id="@+id/rv6"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="bay"
+            android:layout_below="@+id/rv4"
+            android:paddingBottom="0dp"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000000"
+                android:background="@drawable/coin" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="60dp"
+                android:textColor="#000000"
+                android:text="Убрать рекламу"/>
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/rv7"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="60dp"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/rv6"
+            android:background="#26000000" />
+
+
+        <RelativeLayout
+            android:id="@+id/rv8"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:onClick="about"
+            android:layout_below="@+id/rv7"
+            android:foreground="?android:attr/selectableItemBackground">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000000"
+                android:background="@drawable/alert_circle_outline" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="60dp"
+                android:textColor="#000000"
+                android:text="О приложении"/>
+
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/rv10"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="60dp"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/rv8"
+            android:background="#26000000" />
+
+
+
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>

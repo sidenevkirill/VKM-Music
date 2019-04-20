@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rv_cover"
+    android:layout_width="139.0dip"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:layout_marginLeft="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="1.0dip">
+
+    <android.support.v7.widget.CardView
+        android:background="#e0e1e5"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/music_placeholder_bg"
+        android:layout_width="131.0dip"
+        android:layout_height="131.0dip"
+        android:layout_marginBottom="8.0dip">
+        <ImageView
+            android:id="@+id/cover"
+            android:layout_width="131.0dip"
+            android:layout_height="131.0dip"
+            android:layout_marginBottom="8.0dip"
+            android:src="@drawable/placeholder_playlist"
+            />
+
+        <ImageView
+            android:elevation="4dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="85dp"
+            android:layout_marginBottom="5.0dip"
+            android:src="@drawable/play_circle"
+            />
+
+    </android.support.v7.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:maxLines="2"
+        android:textColor="#ff2e3033"
+        android:textSize="14.0dip"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3.0dip"
+        android:fontFamily="sans-serif"
+        android:maxLines="1"
+        android:textColor="@color/colorGray"
+        android:textSize="13.0dip"
+        android:textStyle="normal" />
+
+    <View
+        android:id="@+id/rv7"
+        android:layout_width="150dp"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/rv6"
+        android:background="#26000000" />
+
+</LinearLayout>

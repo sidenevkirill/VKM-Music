@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.alirezaafkar:toolbar:1.1.2@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/toolbar-1.1.2.aar/bab9ede8a8d362c222291ddcd3366ee4/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/toolbar-1.1.2.aar/bab9ede8a8d362c222291ddcd3366ee4/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.alirezaafkar/toolbar/1.1.2/64bd35d77ea15e1b6488b7a554633820f345dbfa/toolbar-1.1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

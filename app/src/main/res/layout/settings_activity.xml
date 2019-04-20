@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/accent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_settings"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp"
+            app:navigationIcon="@drawable/arrow_left"
+            android:theme="@style/DefaultColors" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#4780e8"
+            android:text="Общие" />
+
+        <RelativeLayout
+            android:id="@+id/rv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="37dp"
+            android:paddingBottom="10dp"
+            android:layout_below="@id/toolbar_settings">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000000"
+                android:text="Сохранять музыку" />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="20dp"
+                android:text="По списку"
+                android:textAlignment="textStart" />
+
+            <android.support.v7.widget.AppCompatCheckBox xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/chbox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="7.5dp"
+                app:buttonTint="#000000" />
+
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/rv2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/rv1"
+            android:background="#26000000" />
+
+
+        <RelativeLayout
+            android:id="@+id/rv4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:layout_below="@id/rv2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000000"
+                android:text="Старый дизайн плеера" />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="20dp"
+                android:text="Выключен"
+                android:textAlignment="textStart" />
+
+            <android.support.v7.widget.AppCompatCheckBox xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/chbox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="7.5dp"
+                app:buttonTint="#000000" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/rv3"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/rv4"
+            android:background="#26000000" />
+
+
+        <RelativeLayout
+            android:id="@+id/rv6"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rv4"
+            android:paddingBottom="0dp"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000000"
+                android:text="Сохранить логин и пароль"/>
+
+            <android.support.v7.widget.AppCompatCheckBox xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/chbox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="7.5dp"
+                app:buttonTint="#000000" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/rv7"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/rv6"
+            android:background="#26000000" />
+
+
+        <RelativeLayout
+            android:id="@+id/rv8"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rv7"
+            android:foreground="?android:attr/selectableItemBackground">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000000"
+                android:text="Выбор индифекатора"/>
+
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/rv10"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/rv8"
+            android:background="#26000000" />
+
+
+        <LinearLayout
+            android:id="@+id/rv11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rv10"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/cache_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/accent"
+                android:text="@string/pathcache"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/full_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/accent"
+                android:text="@string/pathfull"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/rv12"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/rv11"
+            android:background="#26000000" />
+
+        <RelativeLayout
+            android:id="@+id/rv13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rv12">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000000"
+                android:text="Просмотр рекламы" />
+
+            <android.support.v7.widget.AppCompatCheckBox xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/watch_ad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="7.5dp"
+                app:buttonTint="#000000" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/load_old"
+            android:layout_below="@id/rv13">
+
+            <Button
+                android:id="@+id/audio_load"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/accent"
+                android:text="Восстановить загрузки"
+                android:textAlignment="center"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+
+
+        <View
+            android:id="@+id/rv9"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/rv13"
+            android:background="#26000000" />
+
+        <View
+            android:id="@+id/rv14"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/load_old"
+            android:background="#26000000" />
+
+
+        <RelativeLayout
+            android:id="@+id/rv15"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/rv14"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000000"
+                android:text="Удалить кэш"  />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/rv16"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/rv15"
+            android:background="#26000000" />
+
+
+
+
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

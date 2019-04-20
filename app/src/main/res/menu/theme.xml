@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.alirezaafkar.example.MainActivity">
+
+    <item
+        android:id="@+id/action_download"
+        android:icon="@drawable/heart"
+        android:orderInCategory="100"
+        android:title="Скачивание плелиста"
+        app:showAsAction="always"
+        />
+
+
+</menu>

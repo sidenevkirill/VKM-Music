@@ -1,0 +1,140 @@
+<resources>
+    <string name="app_name" translatable="false">VKM</string>
+    <string name="mymusic">Моя музыка</string>
+    <string name="action_settings">Настройки</string>
+    <string name="logining">Загрузка...</string>
+
+    <string name="banner_ad_unit">ca-app-pub-1092158975176456/9091900856</string>
+
+    <string name="popular">Популярные</string>
+    <string name="music">Музыка ВКонтакте</string>
+    <string name="about">О приложении</string>
+
+    <string name="download">Загрузить</string>
+    <string name="choose_all">Выбрать все</string>
+
+    <string name="help">О приложение</string>
+    <string name="audio">Аудиозаписи</string>
+    <string name="save">Сохрать</string>
+    <string name="delete">Удалить</string>
+    <string name="add">Добавить</string>
+    <string name="findartist">Find artist</string>
+
+    <string name="download_full">Скачать</string>
+    <string name="download_cache">Сохранить</string>
+
+
+    <string name="noMusic">Нет музыки</string>
+
+    <string name="next">Далее</string>
+
+    <string name="smAllEx">Music will be saved if mediaplayer be ready</string>
+
+    <string name="banner_ad_unit_id" translatable="false">ca-app-pub-1092158975176456/5725797108</string>
+
+
+    <string name="errorStatus" translatable="false">Status</string>
+    <string name="newBuild">New build, please update.</string>
+    <string name="error">Error</string>
+    <string name="update">Update</string>
+
+    <string name="mmusic">музыка</string>
+
+    <string name="savedmusic">Сохранненые</string>
+    <string name="down">Загруженное</string>
+
+    <string name="open">Open</string>
+
+    <string name="close">Close</string>
+
+    <string name="needperm">Need permissions</string>
+    <string name="needpermfull">Need to give permissions or app will be finished</string>
+
+    <string name="give">Give</string>
+    <string name="finish">Finish</string>
+
+    <string name="badlogin">Wrong login</string>
+    <string name="badpassword">Username or password is incorrect</string>
+
+    <string name="warning">Warning</string>
+    <string name="warninginfo">By accepting the terms of use, you agree that the application can store the login and password on the device (your data is not being transferred to anyone or anywhere) and that the developer is not responsible for the consequences of using this application.</string>
+
+    <string name="notstable">Maybe it can\'t be stable</string>
+
+    <string name="loading">Loading..</string>
+
+    <string name="notavailable">Not available</string>
+
+    <string name="code">Code</string>
+    <string name="sendcode">Send code</string>
+    <string name="captcha">Captcha</string>
+
+
+    <string name="notification_ad">Please look at the advertisement</string>
+    <string name="notification_info">By this you help the developer</string>
+
+    <string name="notification">Notification</string>
+
+    <string name="download_lv">Download last version</string>
+
+    <string name="downloadmusic">Download music</string>
+    <string name="download_music_list_cache">Выбор песен</string>
+    <string name="download_music_list_phone">Download music list to phone</string>
+
+
+    <string name="recommendations">Рекоммендации</string>
+
+    <string name="download_path">Download path</string>
+
+    <string name="playlists">Плейлисты</string>
+
+    <string name="cancel">Назад</string>
+
+
+    <string name="pathfull">Path full</string>
+    <string name="pathcache">Path cache</string>
+
+    <string name="setdefault">Set to default</string>
+
+    <string name="settings">Настройки</string>
+
+    <string name="create_playlist">Create playlist</string>
+
+    <string name="search_title">Поиск..</string>
+
+    <string name="internet_error">No internet connection.</string>
+
+
+    <string name="changepath">Change path</string>
+    <string name="path">Path</string>
+
+    <string name="useragentAndroid" translatable="false">Mozilla/5.0 (Android; Linux armv7l; rv:9.0) Gecko/20111216 Firefox/9.0 Fennec/9.0</string>
+    <string name="useragentWindows" translatable="false">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36</string>
+    <string name="useragentApple" translatable="false">Mozilla/5.0 (iPad; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) FxiOS/1.0 Mobile/12F69 Safari/600.1.4</string>
+    <string name="useragentMacintosh" translatable="false">Mozilla/5.0 (Macintosh; U; PPC Mac OS X; fi-fi) AppleWebKit/420+ (KHTML, like Gecko) Safari/419.3</string>
+
+
+    <string name="downloadUpdate">Downloading update...</string>
+
+    <string name="chooseUserAgent">Choose user agent</string>
+
+    <string name="selected">Selected: </string>
+
+
+    <string name="saveToCache">Save to cache</string>
+    <string name="deleteFromCache">Delete from cache</string>
+
+    <string name="playNext">Play next</string>
+
+    <string name="chooseUserAgentAttention">For download music choose UserAgent Apple</string>
+
+    <string name="deleteCacheInfo">All existing files in the cache folder will be deleted. Are you sure?</string>
+
+    <string name="unavailable">Unavailable</string>
+
+    <string name="done">Done.</string>
+
+    <string name="deleteMusic">Song was deleted.</string>
+
+
+</resources>

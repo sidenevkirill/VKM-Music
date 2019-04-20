@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="1"
+    >
+
+    <ImageView
+        android:id="@+id/cover_small"
+        android:layout_width="@android:dimen/notification_large_icon_width"
+        android:layout_height="@android:dimen/notification_large_icon_height"
+        android:layout_gravity="center_vertical"
+        android:background="#ff384554"
+        android:src="@drawable/aplayer_cover_placeholder" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1.0"
+        android:orientation="vertical"
+        android:paddingBottom="2.0dip"
+        android:paddingRight="8.0dip"
+        android:paddingTop="2.0dip">
+
+        <TextView
+            android:id="@+id/title_notification_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.0dip"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:fadingEdgeLength="10.0dip"
+            android:singleLine="true"
+            android:textColor="@color/accent"
+            android:text="Custom title"
+            android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent.Title" />
+
+        <TextView
+            android:id="@+id/content_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8.0dip"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:fadingEdgeLength="10.0dip"
+            android:singleLine="true"
+            android:text="Content!!!!1one"
+            android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/prev_small"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="48.0dip"
+        android:layout_height="48.0dip"
+        android:layout_gravity="center_vertical"
+        android:scaleType="center"
+        android:src="@drawable/ic_previous_24" />
+
+    <ImageView
+        android:id="@+id/playpause_small"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="48.0dip"
+        android:scaleType="center"
+        android:layout_height="48.0dip"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_pause_24"
+      />
+
+    <ImageView
+        android:id="@+id/next_small"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="48.0dip"
+        android:scaleType="center"
+        android:layout_height="48.0dip"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_next_24"
+       />
+
+    <ImageView
+        android:id="@+id/stop_small"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="40.0dip"
+        android:layout_height="40.0dip"
+        android:layout_gravity="center_vertical"
+        android:alpha="0.5"
+        android:tint="@color/colorGray"
+        android:padding="8.0dip"
+        android:src="@drawable/ic_temp_close" />
+</LinearLayout>

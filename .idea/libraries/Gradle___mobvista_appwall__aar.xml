@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: :mobvista_appwall:@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/mobvista_appwall.aar/11b7f7b7d8e6df589c8f2ad39bd77f4f/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/mobvista_appwall.aar/11b7f7b7d8e6df589c8f2ad39bd77f4f/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

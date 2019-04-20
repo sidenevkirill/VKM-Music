@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5281b9"
+    android:orientation="vertical"
+    android:theme="@style/DefaultColors">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:ems="100"
+        android:hint="@string/code"
+        android:inputType="textPersonName"
+        android:textColor="@color/md_white_1000"
+        android:textColorHint="@color/md_white_1000">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/code1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/md_white_1000" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/code"
+        android:layout_alignStart="@+id/code"
+        android:layout_below="@+id/code"
+        android:background="#6795cd"
+        android:text="@string/sendcode"
+        android:textColor="@color/md_white_1000"
+        android:textColorHint="@color/md_white_1000" />
+
+    <ImageView
+        android:id="@+id/captcha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/code"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

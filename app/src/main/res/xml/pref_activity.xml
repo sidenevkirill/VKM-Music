@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <PreferenceCategory android:title="string/pref_category_general">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="enable_night_mode"
+            android:title="string/pref_night_mode" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="random_theme"
+            android:title="string/pref_night_mode" />
+        <Preference
+            android:key="theme_color"
+            android:title="string/pref_night_mode" />
+
+        <!--<Preference-->
+        <!--android:key="icon_color"-->
+        <!--android:title="@string/pref_icon_color_title" />-->
+
+        <Preference
+            android:key="chat_background"
+            android:title="string/pref_chat_background" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="string/pref_night_mode_auto">
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="night_mode_auto"
+            android:title="string/pref_enable" />
+
+        <Preference
+            android:key="night_start"
+            android:title="string/pref_night_start"
+            android:summary="21:00"/>
+
+        <Preference
+            android:key="night_end"
+            android:title="string/pref_night_end"
+            android:summary="7:00"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="system_panels"
+        android:title="string/pref_category_system_panels">
+        <SwitchPreference
+            android:key="translucent_status_bar"
+            android:title="string/pref_translucent_status_bar" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="string/pref_category_drawer">
+        <ListPreference
+            android:defaultValue="0"
+            android:key="drawer_gravity"
+            android:title="string/pref_drawer_gravity" />
+
+        <ListPreference
+            android:defaultValue="solid"
+            android:key="header_type"
+            android:title="string/pref_header_type" />
+
+        <ListPreference
+            android:defaultValue="2"
+            android:key="blur_radius"
+            android:title="string/pref_header_blur" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="string/pref_category_invisible">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="offline"
+            android:title="string/pref_offline" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="no_reading"
+            android:title="string/pref_no_reading" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="no_typing" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="pref_category_notifications">
+        <SwitchPreference android:title="string/pref_enable" />
+        <SwitchPreference android:title="string/pref_led_enable" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="string/pref_category_cache">
+        <Preference
+            android:key="clear_cache"
+            android:title="string/pref_clear_cache" />
+
+        <Preference
+            android:key="clear_images"
+            android:title="string/pref_clear_images" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="string/pref_about">
+
+        <Preference
+            android:key="version"
+            android:title="string/pref_version_title" />
+        <Preference
+            android:key="authors"
+            android:summary="string/pref_devs_title"
+            android:title="string/pref_authors_title" />
+
+        <Preference
+            android:key="github"
+            android:summary="string/pref_github_summary"
+            android:title="string/pref_github" />
+
+        <Preference
+            android:key="group"
+            android:summary="string/pref_official_group_summary"
+            android:title="ref_official_group" />
+
+
+    </PreferenceCategory>
+</PreferenceScreen>
