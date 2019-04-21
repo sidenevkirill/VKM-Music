@@ -1,4 +1,0 @@
-# Referenced at C:\SDK\Projects\new music\vkaudiomanager\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:33
--keep class android.support.multidex.MultiDexApplication { <init>(); }
-# Referenced at C:\SDK\Projects\new music\vkaudiomanager\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:33
--keep class android.support.v4.app.CoreComponentFactory { <init>(); }
