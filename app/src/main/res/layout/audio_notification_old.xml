@@ -97,5 +97,5 @@
         android:padding="8.0dip"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_temp_close"
-        android:tint="@color/accent" />
+        android:tint="@color/colorAccent" />
 </LinearLayout>

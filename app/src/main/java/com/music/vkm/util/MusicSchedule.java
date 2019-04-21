@@ -1,4 +1,4 @@
-package com.music.vkm;
+package com.music.vkm.util;
 
 import com.music.vkm.item.Music;
 
@@ -17,7 +17,7 @@ public class MusicSchedule {
     private boolean stateShuffle = false;
     private String namePlaylist = "default";
     private String systemNamePlaylist = "default";
-    int position = -1;
+    public int position = -1;
 
     private List<Music> shuffledMusic = new ArrayList<>();
 

@@ -4,7 +4,6 @@ buildscript {
     repositories {
         jcenter()
         google()
-        maven { url 'http://guardian.github.com/maven/repo-releases' }
     }
 
     dependencies {
@@ -22,6 +21,7 @@ allprojects {
             dirs 'libs'
         }
         google()
+        maven { url 'http://guardian.github.com/maven/repo-releases' }
     }
 }
 

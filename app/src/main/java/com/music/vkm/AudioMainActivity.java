@@ -19,20 +19,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.IBinder;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.BottomSheetBehavior;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.TabLayout;
-import android.support.multidex.MultiDex;
-import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.SearchView;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -45,14 +31,28 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.viewpager.widget.ViewPager;
+
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.analytics.FirebaseAnalytics;
-import com.music.vkm.adapter.MusicAdapter;
 import com.music.vkm.adapter.AudioFragmentAdapter;
+import com.music.vkm.adapter.MusicAdapter;
 import com.music.vkm.util.AudioUtil;
 import com.music.vkm.util.MusicService;
 import com.squareup.picasso.Picasso;
@@ -717,7 +717,7 @@ public class AudioMainActivity extends AppCompatActivity implements BillingProce
                 return true;
 
             case R.id.test:
-                Intent intent = new Intent(AudioMainActivity.this, Download_Activity.class);
+                Intent intent = new Intent(AudioMainActivity.this, DownloadActivity.class);
                 intent.putExtra("typedownload", "full");
                 intent.putExtra("newPlayList", (Serializable) AudioListFragmentMy.schedule.getPlaylist());
                 startActivity(intent);
@@ -907,7 +907,7 @@ public class AudioMainActivity extends AppCompatActivity implements BillingProce
                             }
 
                             case 2: {
-                                Intent intent = new Intent(AudioMainActivity.this, Download_Activity.class);
+                                Intent intent = new Intent(AudioMainActivity.this, DownloadActivity.class);
                                 intent.putExtra("typedownload", "cache");
                                 intent.putExtra("newPlayList", (Serializable) AudioListFragmentMy.schedule.getPlaylist());
                                 startActivity(intent);
@@ -1278,7 +1278,7 @@ public class AudioMainActivity extends AppCompatActivity implements BillingProce
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
-        MultiDex.install(this);
+//        MultiDex.install(this);
     }
 
 

@@ -7,15 +7,6 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomSheetBehavior;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.PopupMenu;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -24,10 +15,22 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.PopupMenu;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.snackbar.Snackbar;
 import com.music.vkm.adapter.MusicAdapter;
 import com.music.vkm.item.Music;
 import com.music.vkm.item.PlayList;
 import com.music.vkm.util.AudioUtil;
+import com.music.vkm.util.Cookie;
+import com.music.vkm.util.MusicSchedule;
 import com.music.vkm.util.MusicService;
 
 import java.io.IOException;
@@ -58,7 +61,7 @@ public class AudioListPopularFragment extends Fragment {
     public static MusicSchedule schedule = new MusicSchedule();
     private ProgressDialog progressDialog;
     SwipeRefreshLayout mSwipeRefreshLayout;
-    com.music.vkm.Cookie Cookie;
+    com.music.vkm.util.Cookie Cookie;
     String TAG = "Popular";
     static MusicAdapter adapter;
 

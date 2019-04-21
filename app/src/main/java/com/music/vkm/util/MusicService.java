@@ -21,17 +21,17 @@ import android.os.IBinder;
 import android.os.Looper;
 import android.os.Message;
 import android.support.v4.media.MediaMetadataCompat;
-import android.support.v4.media.session.MediaButtonReceiver;
 import android.support.v4.media.session.MediaSessionCompat;
 import android.support.v4.media.session.PlaybackStateCompat;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.widget.Toast;
 
+import androidx.media.session.MediaButtonReceiver;
+
 import com.evgenii.jsevaluator.JsEvaluator;
 import com.evgenii.jsevaluator.interfaces.JsCallback;
 import com.music.vkm.MainActivity;
-import com.music.vkm.MusicSchedule;
 import com.music.vkm.NotificationGenerator;
 import com.music.vkm.R;
 import com.music.vkm.item.Music;

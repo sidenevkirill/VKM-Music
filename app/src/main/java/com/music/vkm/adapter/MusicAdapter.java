@@ -2,10 +2,6 @@ package com.music.vkm.adapter;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,12 +13,17 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.music.vkm.item.Music;
-import com.music.vkm.MusicSchedule;
-import com.music.vkm.item.PlayList;
+import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.music.vkm.R;
 import com.music.vkm.SettingsGeneralActivity;
+import com.music.vkm.item.Music;
+import com.music.vkm.item.PlayList;
 import com.music.vkm.util.AudioUtil;
+import com.music.vkm.util.MusicSchedule;
 import com.music.vkm.widget.SpacesItemDecoration;
 import com.squareup.picasso.Picasso;
 

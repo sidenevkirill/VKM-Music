@@ -9,10 +9,6 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.TextInputEditText;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -20,7 +16,13 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.textfield.TextInputEditText;
 import com.music.vkm.util.AudioUtil;
+import com.music.vkm.util.Cookie;
 
 import java.io.IOException;
 
@@ -34,7 +36,7 @@ import okhttp3.Response;
 
 public class LoginActivity extends AppCompatActivity {
     private String posturl = null;
-    public com.music.vkm.Cookie cookie;
+    public Cookie cookie;
     SharedPreferences sPref;
     private ProgressDialog progressDialog;
     public static final int PERMISSION_REQUEST_CODE = 123;

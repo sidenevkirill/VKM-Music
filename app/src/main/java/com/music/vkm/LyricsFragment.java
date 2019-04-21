@@ -13,8 +13,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.music.vkm.util.MusicService;
+import androidx.fragment.app.Fragment;
+
 import com.music.vkm.util.AudioUtil;
+import com.music.vkm.util.MusicService;
 
 import java.io.IOException;
 
@@ -32,7 +34,7 @@ import static android.content.Context.MODE_PRIVATE;
  * Created by mascot on 04.10.2017.
  */
 
-public class LyricsFragment extends android.support.v4.app.Fragment {
+public class LyricsFragment extends Fragment {
 
     BroadcastReceiver service;
     static View view;

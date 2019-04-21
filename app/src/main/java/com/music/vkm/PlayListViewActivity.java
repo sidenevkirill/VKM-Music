@@ -15,16 +15,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.BottomSheetBehavior;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.PopupMenu;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -35,11 +25,23 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.PopupMenu;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.github.bluzwong.swipeback.SwipeBackActivityHelper;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.snackbar.Snackbar;
 import com.music.vkm.adapter.MusicAdapter;
 import com.music.vkm.item.Music;
 import com.music.vkm.item.PlayList;
 import com.music.vkm.util.AudioUtil;
+import com.music.vkm.util.MusicSchedule;
 import com.music.vkm.util.MusicService;
 import com.squareup.picasso.Picasso;
 
@@ -676,7 +678,7 @@ public class PlayListViewActivity extends AppCompatActivity {
             builder.setMessage(getResources().getString(R.string.download_path));
             builder.setPositiveButton(getResources().getString(R.string.download_full), new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {
-                    Intent intent = new Intent(PlayListViewActivity.this, Download_Activity.class);
+                    Intent intent = new Intent(PlayListViewActivity.this, DownloadActivity.class);
                     intent.putExtra("newPlayList", (Serializable) schedule.getPlaylist());
                     intent.putExtra("typedownload", "full");
                     startActivity(intent);
@@ -684,7 +686,7 @@ public class PlayListViewActivity extends AppCompatActivity {
             });
             builder.setNegativeButton(getResources().getString(R.string.download_cache), new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {
-                    Intent intent = new Intent(PlayListViewActivity.this, Download_Activity.class);
+                    Intent intent = new Intent(PlayListViewActivity.this, DownloadActivity.class);
                     intent.putExtra("newPlayList", (Serializable) schedule.getPlaylist());
                     intent.putExtra("typedownload", "cache");
                     startActivity(intent);

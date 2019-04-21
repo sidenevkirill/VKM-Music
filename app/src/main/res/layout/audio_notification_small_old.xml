@@ -32,7 +32,7 @@
             android:fadingEdge="horizontal"
             android:fadingEdgeLength="10.0dip"
             android:singleLine="true"
-            android:textColor="@color/accent"
+            android:textColor="@color/colorAccent"
             android:text="Custom title"
             android:textAppearance="@android:style/TextAppearance.StatusBar.EventContent.Title" />
 

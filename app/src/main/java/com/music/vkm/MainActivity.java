@@ -1,12 +1,13 @@
 package com.music.vkm;
 
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import com.github.bluzwong.swipeback.SwipeBackActivityHelper;
 import com.google.firebase.analytics.FirebaseAnalytics;

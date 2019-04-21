@@ -13,7 +13,7 @@
         android:layout_height="0dp"
         android:layout_weight="0.6">
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/block_image"
             android:layout_width="match_parent"
             android:layout_height="350dp"
@@ -33,7 +33,7 @@
                 android:scaleType="centerInside"
                 android:src="@drawable/ic_song_placeholder_96" />
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
     </RelativeLayout>
 
     <RelativeLayout

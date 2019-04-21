@@ -1,7 +1,4 @@
-package com.music.vkm;
-
-import android.os.Parcel;
-import android.os.Parcelable;
+package com.music.vkm.util;
 
 import java.io.Serializable;
 import java.util.Arrays;
@@ -24,12 +21,12 @@ public class Cookie implements Serializable {
         cookarr[tmp] = tmpstr;
     }
 
-    void addCookie(String tmpstr) {
+    public void addCookie(String tmpstr) {
         cookarr[i] = tmpstr;
         i++;
     }
 
-    String getCookieinLine() {
+    public String getCookieinLine() {
         StringBuilder tmp = new StringBuilder();
         for (itmp = 0; itmp < i; itmp++) {
             tmp.append(cookarr[itmp]).append(";");
@@ -37,7 +34,7 @@ public class Cookie implements Serializable {
         return tmp.toString();
     }
 
-    void setCookie(int tmp, String tmpstr) {
+    public void setCookie(int tmp, String tmpstr) {
         cookarr[tmp] = tmpstr;
     }
 }

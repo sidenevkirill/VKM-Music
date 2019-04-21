@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="DefaultColors" parent="MaterialBaseBaseTheme.Light.DarkToolbar">
+    <style name="DefaultColors" parent="@style/Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorAccentWhite</item>
         <item name="colorAccent">@color/colorPrimary</item>
