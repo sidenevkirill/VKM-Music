@@ -46,13 +46,13 @@ public class SettingsActivity extends AppCompatActivity implements BillingProces
     }
 
     public void Click(View view) {
-        Intent intent = new Intent(SettingsActivity.this, Settings.class);
+        Intent intent = new Intent(SettingsActivity.this, SettingsGeneralActivity.class);
         startActivityForResult(intent, 1);
 
     }
 
     public void about(View view) {
-        Intent intent = new Intent(SettingsActivity.this, Info.class);
+        Intent intent = new Intent(SettingsActivity.this, InfoActivity.class);
         startActivityForResult(intent, 1);
 
     }

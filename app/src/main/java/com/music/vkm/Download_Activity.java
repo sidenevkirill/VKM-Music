@@ -14,6 +14,9 @@ import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.music.vkm.adapter.DownloadAdapter;
+import com.music.vkm.item.Music;
+import com.music.vkm.widget.SpacesItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +55,7 @@ public class Download_Activity extends AppCompatActivity {
         });
 
         list.clear();
-        list.addAll(Audio_list_fragment_my.schedule.getPlaylist());
+        list.addAll(AudioListFragmentMy.schedule.getPlaylist());
 
         Intent intent = getIntent();
         list = (ArrayList<Music>) intent.getSerializableExtra("newPlayList");
@@ -75,7 +78,7 @@ public class Download_Activity extends AppCompatActivity {
         recMusic.addItemDecoration(new SpacesItemDecoration(5));
 
 
-        final AdapterDownload adapter = new AdapterDownload(list);
+        final DownloadAdapter adapter = new DownloadAdapter(list);
         recMusic.setAdapter(adapter);
 
 
@@ -111,9 +114,9 @@ public class Download_Activity extends AppCompatActivity {
                 if (adapter.getCountChecked() > 0) {
 
                     if (type.equals("full")) {
-                        Audio_main_activity.mBoundService.downloadListMusic(adapter.getDownloadList(), 2);
+                        AudioMainActivity.mBoundService.downloadListMusic(adapter.getDownloadList(), 2);
                     } else {
-                        Audio_main_activity.mBoundService.downloadListMusic(adapter.getDownloadList(), 1);
+                        AudioMainActivity.mBoundService.downloadListMusic(adapter.getDownloadList(), 1);
                     }
                     finish();
                 } else {
@@ -131,14 +134,14 @@ public class Download_Activity extends AppCompatActivity {
 
 
     void saveText(String saved_text, String save) {
-        sPref = getSharedPreferences(Settings.SPreferences, MODE_PRIVATE);
+        sPref = getSharedPreferences(SettingsGeneralActivity.SPreferences, MODE_PRIVATE);
         SharedPreferences.Editor ed = sPref.edit();
         ed.putString(saved_text, save);
         ed.commit();
     }
 
     String loadText(String saved_text) {
-        sPref = getSharedPreferences(Settings.SPreferences, MODE_PRIVATE);
+        sPref = getSharedPreferences(SettingsGeneralActivity.SPreferences, MODE_PRIVATE);
         String savedText = sPref.getString(saved_text, "");
         return savedText;
     }

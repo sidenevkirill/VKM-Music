@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: :mobvista_videocommon:@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/122a2ae815fdef107a089abdc61a1997/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/122a2ae815fdef107a089abdc61a1997/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/efb3ce0f10edb9cd836cdcc00dfe954d/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/efb3ce0f10edb9cd836cdcc00dfe954d/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

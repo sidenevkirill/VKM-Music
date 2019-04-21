@@ -12,13 +12,6 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="com.android.vending.BILLING" />
 
-    <uses-feature
-        android:name="android.hardware.location"
-        android:required="false" />
-    <uses-feature
-        android:name="android.hardware.location.network"
-        android:required="false" />
-
     <permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
 
     <application
@@ -27,15 +20,16 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
+        android:largeHeap="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon,android:theme">
         <activity
-            android:name=".Log_In"
+            android:name=".LoginActivity"
             android:theme="@style/AppLogin" />
-        <activity android:name=".Ad" />
-        <activity android:name=".Log_In_2fa" />
+        <activity android:name=".AdActivity" />
+        <activity android:name=".Login2faActivity" />
         <activity
-            android:name=".AP_Main"
+            android:name=".MainActivity"
             android:launchMode="singleInstance"
             android:theme="@style/MusicPlayer">
             <intent-filter>
@@ -44,20 +38,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Settings"
+            android:name=".SettingsGeneralActivity"
             android:theme="@style/MainTheme" />
-        <activity android:name=".PlayList_View" />
+        <activity android:name=".PlayListViewActivity" />
         <activity
             android:name=".Download_Activity"
             android:theme="@style/MainTheme" />
         <activity
-            android:name=".Info"
+            android:name=".InfoActivity"
             android:theme="@style/MainTheme" />
         <activity
             android:name=".SettingsActivity"
             android:theme="@style/MainTheme" />
         <activity
-            android:name=".Audio_main_activity"
+            android:name=".AudioMainActivity"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait"
             android:theme="@style/MainTheme">
@@ -86,7 +80,7 @@
             </intent-filter>
         </service>
         <service
-            android:name=".MusicService"
+            android:name=".util.MusicService"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -113,12 +107,12 @@
             android:name="net.rdrei.android.dirchooser.DirectoryChooserActivity"
             android:theme="@style/DefaultColors" />
 
-        <service android:name=".Services.MyFirebaseMessagingService">
+        <service android:name=".services.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".Services.MyFirebaseInstanceIDService">
+        <service android:name=".services.MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
@@ -444,6 +438,10 @@
             android:authorities="${applicationId}.MediaContentProvider"
             android:exported="false"
             android:grantUriPermissions="true" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
     </application>
 
 </manifest>

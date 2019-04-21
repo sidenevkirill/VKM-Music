@@ -13,6 +13,7 @@ import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 import android.widget.RemoteViews;
 
+import com.music.vkm.util.AudioUtil;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
@@ -34,7 +35,7 @@ public class NotificationGenerator {
     public static final int NOTIFICATION_ID_CUSTOM_BIG = 9;
 
     static String loadText(String saved_text, Context context) {
-        sPref = context.getSharedPreferences(Settings.SPreferences, Context.MODE_PRIVATE);
+        sPref = context.getSharedPreferences(SettingsGeneralActivity.SPreferences, Context.MODE_PRIVATE);
         String savedText = sPref.getString(saved_text, "");
         return savedText;
     }
@@ -58,7 +59,7 @@ public class NotificationGenerator {
         NotificationManager nm = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         Intent notifyIntent;
 
-        notifyIntent = new Intent(context, Audio_main_activity.class);
+        notifyIntent = new Intent(context, AudioMainActivity.class);
         notifyIntent.putExtra("open", "true");
 
         notifyIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
@@ -74,16 +75,16 @@ public class NotificationGenerator {
         nc.setCustomContentView(expandedView1);
         nc.setCustomBigContentView(expandedView);
 
-        nc.getBigContentView().setTextViewText(R.id.title_notification, wstr.normalizeString(title));
-        nc.getBigContentView().setTextViewText(R.id.content, wstr.normalizeString(artist));
-        nc.getContentView().setTextViewText(R.id.title_notification_small, wstr.normalizeString(title));
-        nc.getContentView().setTextViewText(R.id.content_small, wstr.normalizeString(artist));
+        nc.getBigContentView().setTextViewText(R.id.title_notification, AudioUtil.normalizeString(title));
+        nc.getBigContentView().setTextViewText(R.id.content, AudioUtil.normalizeString(artist));
+        nc.getContentView().setTextViewText(R.id.title_notification_small, AudioUtil.normalizeString(title));
+        nc.getContentView().setTextViewText(R.id.content_small, AudioUtil.normalizeString(artist));
 
 
         if (!url.equals("null")) {
             Bitmap bitmap = null;
 
-            Picasso.with(context).load(url).into(new Target() {
+            Picasso.get().load(url).into(new Target() {
                 @Override
                 public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
                     nc.getBigContentView().setImageViewBitmap(R.id.cover, bitmap);
@@ -91,7 +92,7 @@ public class NotificationGenerator {
                 }
 
                 @Override
-                public void onBitmapFailed(Drawable errorDrawable) {
+                public void onBitmapFailed(Exception e, Drawable errorDrawable) {
 
                 }
 

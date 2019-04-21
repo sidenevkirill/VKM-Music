@@ -57,7 +57,7 @@ public class NotificationService extends BroadcastReceiver {
                 if (loadText("advertisiment", context).equals("true")) {
                     if (loadText("first_open", context).equals("false")) {
                         Toast.makeText(context, "В настройках вы можете выключить просмотр рекламы раз в день.", Toast.LENGTH_LONG).show();
-                        Intent intent1 = new Intent(context, Ad.class);
+                        Intent intent1 = new Intent(context, AdActivity.class);
                         intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         context.startActivity(intent1);
                     }
@@ -75,7 +75,7 @@ public class NotificationService extends BroadcastReceiver {
 
     void createNotification(Context context) {
         Log.d("Notification", "Start");
-        Intent notificationIntent = new Intent(context, Ad.class);
+        Intent notificationIntent = new Intent(context, AdActivity.class);
         PendingIntent contentIntent = PendingIntent.getActivity(context,
                 0, notificationIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
@@ -115,13 +115,13 @@ public class NotificationService extends BroadcastReceiver {
 
 
     private String loadText(String saved_text, Context context) {
-        SharedPreferences sPref = context.getSharedPreferences(Settings.SPreferences, MODE_PRIVATE);
+        SharedPreferences sPref = context.getSharedPreferences(SettingsGeneralActivity.SPreferences, MODE_PRIVATE);
         String savedText = sPref.getString(saved_text, "");
         return savedText;
     }
 
     void saveText(String saved_text, String save, Context context) {
-        SharedPreferences sPref = context.getSharedPreferences(Settings.SPreferences, MODE_PRIVATE);
+        SharedPreferences sPref = context.getSharedPreferences(SettingsGeneralActivity.SPreferences, MODE_PRIVATE);
         SharedPreferences.Editor ed = sPref.edit();
         ed.putString(saved_text, save);
         ed.apply();
