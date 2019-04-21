@@ -20,7 +20,6 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 
-
 import java.io.IOException;
 
 import okhttp3.Call;
@@ -78,10 +77,10 @@ public class Log_In extends AppCompatActivity {
 
         if (loadText().equals("")) {
 
-            final CheckBox chbox_s = (CheckBox) findViewById(R.id.chbox_s);
+            final CheckBox chbox_s = findViewById(R.id.chbox_s);
 
-            final TextInputEditText emailed = (TextInputEditText) findViewById(R.id.phonemail1);
-            final TextInputEditText passed = (TextInputEditText) findViewById(R.id.password1);
+            final TextInputEditText emailed = findViewById(R.id.phonemail1);
+            final TextInputEditText passed = findViewById(R.id.password1);
 
             if (loadText("savedata").equals("true")) {
                 emailed.setText(loadText("login"));
@@ -110,7 +109,7 @@ public class Log_In extends AppCompatActivity {
 
             Cookie = new cookie();
 
-            final Button login = (Button) findViewById(R.id.login);
+            final Button login = findViewById(R.id.login);
 
             View.OnClickListener logIn = new View.OnClickListener() {
                 @Override
@@ -278,8 +277,8 @@ public class Log_In extends AppCompatActivity {
     }
 
     void LogIn(String posturl) {
-        TextInputEditText emailed = (TextInputEditText) findViewById(R.id.phonemail1);
-        TextInputEditText passed = (TextInputEditText) findViewById(R.id.password1);
+        TextInputEditText emailed = findViewById(R.id.phonemail1);
+        TextInputEditText passed = findViewById(R.id.password1);
         final String email = emailed.getText().toString();
         final String pass = passed.getText().toString();
 

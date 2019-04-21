@@ -43,7 +43,7 @@ public class wstr {
             } else result = "Error in parsing";
 
         }
-       // result = normalizeString(result);
+        // result = normalizeString(result);
         return result;
     }
 
@@ -54,7 +54,7 @@ public class wstr {
             MessageDigest digest = java.security.MessageDigest
                     .getInstance(MD5);
             digest.update(s.getBytes());
-            byte messageDigest[] = digest.digest();
+            byte[] messageDigest = digest.digest();
 
             // Create Hex String
             StringBuilder hexString = new StringBuilder();

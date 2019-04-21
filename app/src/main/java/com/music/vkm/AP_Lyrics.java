@@ -13,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-
 import java.io.IOException;
 
 import okhttp3.Call;
@@ -62,8 +61,6 @@ public class AP_Lyrics extends android.support.v4.app.Fragment {
     }
 
 
-
-
     void SetInfo(String art, String titl) {
         TextView artist = view.findViewById(R.id.artist_lyrics);
 
@@ -92,8 +89,7 @@ public class AP_Lyrics extends android.support.v4.app.Fragment {
             new_lyrics.setText(getResources().getText(R.string.loading));
             getLyrics(MusicService.getSchedule().getCurrentMusic().getLyrics_id(), MusicService.getSchedule().getCurrentMusic().getData_id());
 
-        }
-        else new_lyrics.setText("No lyrics");
+        } else new_lyrics.setText("No lyrics");
     }
 
 
@@ -120,13 +116,12 @@ public class AP_Lyrics extends android.support.v4.app.Fragment {
     }
 
 
-    void getLyrics(String lyrics_id,String data_id) {
+    void getLyrics(String lyrics_id, String data_id) {
         Log.d("TestLyrics", "getLyrics: ");
         OkHttpClient client = new OkHttpClient().newBuilder()
                 .followRedirects(false)
                 .followSslRedirects(false)
                 .build();
-
 
 
         RequestBody formBody = new FormBody.Builder()

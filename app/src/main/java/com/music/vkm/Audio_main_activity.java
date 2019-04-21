@@ -15,7 +15,6 @@ import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -28,8 +27,6 @@ import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.multidex.MultiDex;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AlertDialog;
@@ -50,9 +47,7 @@ import android.widget.TextView;
 
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
-import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
@@ -257,7 +252,6 @@ public class Audio_main_activity extends AppCompatActivity implements BillingPro
 */
 
 
-
             FrameLayout bottomSheetLayout = findViewById(R.id.bottom_sheet_full);
 
             mBottomSheetBehavior = BottomSheetBehavior.from(bottomSheetLayout);
@@ -292,7 +286,6 @@ public class Audio_main_activity extends AppCompatActivity implements BillingPro
                 }
 
 
-
             };
 
 
@@ -309,7 +302,7 @@ public class Audio_main_activity extends AppCompatActivity implements BillingPro
                 @Override
                 public void onStateChanged(@NonNull View bottomSheet, int newState) {
 
-                    Log.d("StateSheet", "onStateChanged: " + Integer.toString(newState));
+                    Log.d("StateSheet", "onStateChanged: " + newState);
 
 
                 }
@@ -350,7 +343,6 @@ public class Audio_main_activity extends AppCompatActivity implements BillingPro
             }
 
 
-
             Toolbar toolbar = findViewById(R.id.toolbar_main);
             setSupportActionBar(toolbar);
             getSupportActionBar().setTitle(getResources().getString(R.string.audio));
@@ -362,7 +354,7 @@ public class Audio_main_activity extends AppCompatActivity implements BillingPro
             setupViewPagerDef(viewpager_main);
             tab_main.setupWithViewPager(viewpager_main);
 
-            bp = new BillingProcessor(this, "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvOmr2A4lvT2q7aemS7HSmLEiNBgIzn4GtSzkydS8fuop1Ia3C0gxK22HyNQml2vD3FS+4pa5fjQTlQnTt2ptlb3GCP8I0lBQsh0rxsZwySiMZG0Oa6APqPsOGiLpyj0CBGRiXGjYM9e1YIwFHOcZsLuHOpWUCJvs7+SIB+BjN0vqcjlKQaiO3hZ/YyqOZhuNfsdqVE0w0NVtwl896igSIE/7tG5OtgBJCFykU3LluJEH6smeef7AA064CUurpW2k7dUTTveVM2HXeo+CjBY/eRciP1ZXmZ4G1NUNTyihSagzbj+ZJKowXQOKpLr5qmrPHzlkcMYGMdXso0+rVyE56QIDAQAB", (BillingProcessor.IBillingHandler) this);
+            bp = new BillingProcessor(this, "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvOmr2A4lvT2q7aemS7HSmLEiNBgIzn4GtSzkydS8fuop1Ia3C0gxK22HyNQml2vD3FS+4pa5fjQTlQnTt2ptlb3GCP8I0lBQsh0rxsZwySiMZG0Oa6APqPsOGiLpyj0CBGRiXGjYM9e1YIwFHOcZsLuHOpWUCJvs7+SIB+BjN0vqcjlKQaiO3hZ/YyqOZhuNfsdqVE0w0NVtwl896igSIE/7tG5OtgBJCFykU3LluJEH6smeef7AA064CUurpW2k7dUTTveVM2HXeo+CjBY/eRciP1ZXmZ4G1NUNTyihSagzbj+ZJKowXQOKpLr5qmrPHzlkcMYGMdXso0+rVyE56QIDAQAB", this);
             bp.initialize();
 
             Listeners();
@@ -497,9 +489,9 @@ public class Audio_main_activity extends AppCompatActivity implements BillingPro
                         audio_panel_cover.setImageDrawable(getResources().getDrawable(R.drawable.placeholder_albumart_56dp));
 
 
-                    Log.d("ListenSheet", "onReceive: " + Integer.toString(mBottomSheetBehavior.getState()));
+                    Log.d("ListenSheet", "onReceive: " + mBottomSheetBehavior.getState());
 
-                    final ImageButton new_shuffle = (ImageButton) findViewById(R.id.new_shuffle);
+                    final ImageButton new_shuffle = findViewById(R.id.new_shuffle);
 
                     if (MusicService.getSchedule().isShuffle()) {
 
@@ -534,7 +526,7 @@ public class Audio_main_activity extends AppCompatActivity implements BillingPro
             public void onReceive(Context context, Intent intent) {
                 if (intent.getAction().equals("com.mascotworld.vkaudiomanager.sendseek")) {
 
-                    ProgressBar audio_panel_progress = (ProgressBar) findViewById(R.id.audio_panel_progress);
+                    ProgressBar audio_panel_progress = findViewById(R.id.audio_panel_progress);
 
                     audio_panel_progress.setProgress(Integer.parseInt(intent.getStringExtra("seek")));
                     audio_panel_progress.setSecondaryProgress(Integer.parseInt(intent.getStringExtra("sseek")));
@@ -661,7 +653,7 @@ public class Audio_main_activity extends AppCompatActivity implements BillingPro
 
         pager.setCurrentItem(1);
 
-        final ImageButton new_shuffle = (ImageButton) findViewById(R.id.new_shuffle);
+        final ImageButton new_shuffle = findViewById(R.id.new_shuffle);
 
         if (MusicService.getSchedule().isShuffle()) {
             new_shuffle.setColorFilter(getResources().getColor(R.color.colorPrimary), android.graphics.PorterDuff.Mode.MULTIPLY);
@@ -685,7 +677,7 @@ public class Audio_main_activity extends AppCompatActivity implements BillingPro
         new_shuffle.setOnClickListener(Actionshuffle);
 
 
-        final ImageButton new_repeat = (ImageButton) findViewById(R.id.new_repeat);
+        final ImageButton new_repeat = findViewById(R.id.new_repeat);
         if (MusicService.loop) {
             new_repeat.setColorFilter(getResources().getColor(R.color.colorPrimary), android.graphics.PorterDuff.Mode.MULTIPLY);
         } else {
@@ -714,9 +706,6 @@ public class Audio_main_activity extends AppCompatActivity implements BillingPro
     }
 
 
-
-
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -733,24 +722,21 @@ public class Audio_main_activity extends AppCompatActivity implements BillingPro
                 return false;
 
 
-
             case R.id.ad:
                 startActivity(new Intent(this, Ad.class));
                 return true;
 
 
-                case R.id.ads:
-                    bp.purchase(Audio_main_activity.this, "15_coin");
-                    bp.consumePurchase("15_coin");
-                    return true;
-
+            case R.id.ads:
+                bp.purchase(Audio_main_activity.this, "15_coin");
+                bp.consumePurchase("15_coin");
+                return true;
 
 
         }
 
         return super.onOptionsItemSelected(item);
     }
-
 
 
     @Override
@@ -1174,7 +1160,7 @@ public class Audio_main_activity extends AppCompatActivity implements BillingPro
                                 e.printStackTrace();
                             }
 
-                            Log.d("TestCheckVersion", "run: " + Integer.toString(versionCodeint));
+                            Log.d("TestCheckVersion", "run: " + versionCodeint);
                             if (versionCodeint > versionCode && (versionCodeint != 0)) {
                                 if (!url.equals("none")) {
                                     AlertDialog.Builder builder = new AlertDialog.Builder(Audio_main_activity.this, R.style.AlertDialog);

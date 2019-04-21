@@ -2,32 +2,25 @@ package com.music.vkm;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
-import android.preference.Preference;
-import android.preference.PreferenceFragment;
-import android.preference.SwitchPreference;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.anjlab.android.iab.v3.BillingProcessor;
 import com.anjlab.android.iab.v3.TransactionDetails;
-import com.github.bluzwong.swipeback.SwipeBackActivityHelper;
 
 public class SettingsActivity extends AppCompatActivity implements BillingProcessor.IBillingHandler {
 
     BillingProcessor bp;
     Button purchaseBtn;
 
-    private final static String SELECTED_THEME= "THEME";
+    private final static String SELECTED_THEME = "THEME";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,13 +28,13 @@ public class SettingsActivity extends AppCompatActivity implements BillingProces
         setContentView(R.layout.activity_settings);
 
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_settings);
+        Toolbar toolbar = findViewById(R.id.toolbar_settings);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(getResources().getString(R.string.settings));
         toolbar.setTitleTextColor(Color.parseColor("#000000"));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        bp = new BillingProcessor(this, "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvOmr2A4lvT2q7aemS7HSmLEiNBgIzn4GtSzkydS8fuop1Ia3C0gxK22HyNQml2vD3FS+4pa5fjQTlQnTt2ptlb3GCP8I0lBQsh0rxsZwySiMZG0Oa6APqPsOGiLpyj0CBGRiXGjYM9e1YIwFHOcZsLuHOpWUCJvs7+SIB+BjN0vqcjlKQaiO3hZ/YyqOZhuNfsdqVE0w0NVtwl896igSIE/7tG5OtgBJCFykU3LluJEH6smeef7AA064CUurpW2k7dUTTveVM2HXeo+CjBY/eRciP1ZXmZ4G1NUNTyihSagzbj+ZJKowXQOKpLr5qmrPHzlkcMYGMdXso0+rVyE56QIDAQAB", (BillingProcessor.IBillingHandler) this);
+        bp = new BillingProcessor(this, "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvOmr2A4lvT2q7aemS7HSmLEiNBgIzn4GtSzkydS8fuop1Ia3C0gxK22HyNQml2vD3FS+4pa5fjQTlQnTt2ptlb3GCP8I0lBQsh0rxsZwySiMZG0Oa6APqPsOGiLpyj0CBGRiXGjYM9e1YIwFHOcZsLuHOpWUCJvs7+SIB+BjN0vqcjlKQaiO3hZ/YyqOZhuNfsdqVE0w0NVtwl896igSIE/7tG5OtgBJCFykU3LluJEH6smeef7AA064CUurpW2k7dUTTveVM2HXeo+CjBY/eRciP1ZXmZ4G1NUNTyihSagzbj+ZJKowXQOKpLr5qmrPHzlkcMYGMdXso0+rVyE56QIDAQAB", this);
         bp.initialize();
 
 
@@ -52,11 +45,11 @@ public class SettingsActivity extends AppCompatActivity implements BillingProces
         bp.consumePurchase("15_coin");
     }
 
-        public void Click(View view) {
-            Intent intent = new Intent(SettingsActivity.this, Settings.class);
-            startActivityForResult(intent, 1);
+    public void Click(View view) {
+        Intent intent = new Intent(SettingsActivity.this, Settings.class);
+        startActivityForResult(intent, 1);
 
-        }
+    }
 
     public void about(View view) {
         Intent intent = new Intent(SettingsActivity.this, Info.class);
@@ -77,7 +70,7 @@ public class SettingsActivity extends AppCompatActivity implements BillingProces
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         switch (item.getItemId()) {
-            case R.id.action_download:  {
+            case R.id.action_download: {
                 bp.purchase(SettingsActivity.this, "15_coin");
                 bp.consumePurchase("15_coin");
                 return true;
@@ -85,7 +78,6 @@ public class SettingsActivity extends AppCompatActivity implements BillingProces
         }
         return super.onOptionsItemSelected(item);
     }
-
 
 
     @Override

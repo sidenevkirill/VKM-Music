@@ -30,7 +30,6 @@ import android.widget.Toast;
 
 import com.evgenii.jsevaluator.JsEvaluator;
 import com.evgenii.jsevaluator.interfaces.JsCallback;
-
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
@@ -54,7 +53,6 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 import static android.media.AudioManager.AUDIOFOCUS_LOSS_TRANSIENT;
-import static com.ironsource.mediationsdk.IronSource.showInterstitial;
 
 public class MusicService extends Service {
 
@@ -251,7 +249,7 @@ public class MusicService extends Service {
             public boolean onError(MediaPlayer mp, int what, int extra) {
 
                 if (what != -38) {
-                    Toast.makeText(getApplicationContext(), "Error " + Integer.toString(what) + " " + Integer.toString(extra), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Error " + what + " " + extra, Toast.LENGTH_LONG).show();
                     // MusicNext();
                 }
                 return true;
@@ -597,7 +595,7 @@ public class MusicService extends Service {
                 .followSslRedirects(false)
                 .build();
 
-        String audio_id = music.getData_id().substring(music.getData_id().indexOf("_") + 1, music.getData_id().length());
+        String audio_id = music.getData_id().substring(music.getData_id().indexOf("_") + 1);
         String audio_owner_id = music.getData_id().substring(0, music.getData_id().indexOf("_"));
         Log.d("audio_owner_id", "audio_id: " + audio_id + "  audio_owner_id: " + audio_owner_id);
 
@@ -837,7 +835,7 @@ public class MusicService extends Service {
     }
 
     public void MusicDestroy() {
-       onDestroy();
+        onDestroy();
     }
 
     public void MusicNext() {
@@ -884,8 +882,8 @@ public class MusicService extends Service {
         Log.d("TestingErrorFocus", "onReceive: ");
         Intent in = new Intent("com.mascotworld.vkaudiomanager.send");
         if (mediaPlayer != null) {
-            in.putExtra("duration", Integer.toString((int) mediaPlayer.getDuration()));
-            Log.d("getInfoMP", "onReceive: " + Integer.toString((int) mediaPlayer.getDuration()));
+            in.putExtra("duration", Integer.toString(mediaPlayer.getDuration()));
+            Log.d("getInfoMP", "onReceive: " + mediaPlayer.getDuration());
 
         } else {
             in.putExtra("duration", "0");
@@ -954,7 +952,7 @@ public class MusicService extends Service {
 
         File info = new File(loadText("pathCache") + "SavedMusicList.info");
 
-        String wwrite = "|" + Integer.toString(i) + "|" + "|ARTIST|" + music.getArtist() + "|TITLE|" + music.getTitle() + "|PIC|" + music.getPic() + "|URL|" + music.getUrl() + "|YOUR|" + music.getYour() + "|LID|" + music.getLyrics_id() + "|ID|" + music.getData_id() + "|" + "|" + Integer.toString(i) + "|";
+        String wwrite = "|" + i + "|" + "|ARTIST|" + music.getArtist() + "|TITLE|" + music.getTitle() + "|PIC|" + music.getPic() + "|URL|" + music.getUrl() + "|YOUR|" + music.getYour() + "|LID|" + music.getLyrics_id() + "|ID|" + music.getData_id() + "|" + "|" + i + "|";
 
 
         try {
@@ -979,8 +977,8 @@ public class MusicService extends Service {
             int i = 0;
             while ((str = br.readLine()) != null) {
 
-                while (str.contains("|" + Integer.toString(i) + "|")) {
-                    String music = wstr.pars("|" + Integer.toString(i) + "|", str, "|" + Integer.toString(i) + "|");
+                while (str.contains("|" + i + "|")) {
+                    String music = wstr.pars("|" + i + "|", str, "|" + i + "|");
                     i++;
                     if (music.contains("ADD_HASH")) {
                         add_hash = wstr.pars("|ADD_HASH|", music, "|");
@@ -1326,7 +1324,6 @@ public class MusicService extends Service {
         registerReceiver(brClose, intFilt1);
 
 
-
         brNext = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
@@ -1367,7 +1364,7 @@ public class MusicService extends Service {
 
 
                 if (Intent.ACTION_MEDIA_BUTTON.equals(intent.getAction())) {
-                    KeyEvent event = (KeyEvent) intent.getParcelableExtra(Intent.EXTRA_KEY_EVENT);
+                    KeyEvent event = intent.getParcelableExtra(Intent.EXTRA_KEY_EVENT);
                   /*  if (KeyEvent.KEYCODE_MEDIA_PLAY == event.getKeyCode()) {
                         MusicPlayPause(true);
                     }

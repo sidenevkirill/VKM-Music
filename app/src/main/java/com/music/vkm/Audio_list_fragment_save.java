@@ -38,10 +38,10 @@ import static com.music.vkm.Audio_main_activity.searchView;
 public class Audio_list_fragment_save extends Fragment {
     String tmp, tmp1, tmp2, tmp3, tmp4, tmp5, tmp6, tmp7, tmp8;
     private View view;
-    public static  Music_Schedule scheduleSaved = new Music_Schedule();
+    public static Music_Schedule scheduleSaved = new Music_Schedule();
     SwipeRefreshLayout mSwipeRefreshLayout;
     String TAG = "Audio_list_save";
-    public  static  AdapterMusic adapter;
+    public static AdapterMusic adapter;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -64,7 +64,7 @@ public class Audio_list_fragment_save extends Fragment {
         return v;
     }
 
-    void setRVAdapter(){
+    void setRVAdapter() {
         final RecyclerView recMusic = view.findViewById(R.id.rv_fragment);
 
         LinearLayoutManager llm = new LinearLayoutManager(view.getContext());
@@ -213,10 +213,10 @@ public class Audio_list_fragment_save extends Fragment {
                 @Override
                 public void run() {
 
-                    Log.d("UpdateRV", "run: " + Integer.toString(scheduleSaved.size()));
+                    Log.d("UpdateRV", "run: " + scheduleSaved.size());
                     RecyclerView recMusic = view.findViewById(R.id.rv_fragment);
                     setRVAdapter();
-                   // recMusic.getAdapter().notifyDataSetChanged();
+                    // recMusic.getAdapter().notifyDataSetChanged();
 
                     TextView info = view.findViewById(R.id.info);
                     if (scheduleSaved.size() > 0) {
@@ -227,10 +227,10 @@ public class Audio_list_fragment_save extends Fragment {
                         info.setVisibility(View.VISIBLE);
                     }
 
-                   // recMusic.getAdapter().notifyDataSetChanged();
-                   // adapter.notifyDataSetChanged();
+                    // recMusic.getAdapter().notifyDataSetChanged();
+                    // adapter.notifyDataSetChanged();
 
-                   // Toast.makeText(getContext(), Integer.toString(scheduleSaved.getPlaylist().size()), Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(getContext(), Integer.toString(scheduleSaved.getPlaylist().size()), Toast.LENGTH_SHORT).show();
                     mSwipeRefreshLayout.setRefreshing(false);
 
 
@@ -275,8 +275,8 @@ public class Audio_list_fragment_save extends Fragment {
             int i = 0;
             while ((str = br.readLine()) != null) {
 
-                while (str.contains("|" + Integer.toString(i) + "|")) {
-                    String music = wstr.pars("|" + Integer.toString(i) + "|", str, "|" + Integer.toString(i) + "|");
+                while (str.contains("|" + i + "|")) {
+                    String music = wstr.pars("|" + i + "|", str, "|" + i + "|");
 
                     i++;
                     if (music.contains("ADD_HASH")) {
@@ -290,8 +290,8 @@ public class Audio_list_fragment_save extends Fragment {
                     tmp4 = wstr.pars("|YOUR|", music, "|");
                     tmp6 = wstr.pars("|LID|", music, "|");
                     dataid = wstr.pars("|ID|", music, "|");
-                    if (listsavemusic.contains(dataid+".mp3"))
-                    music_schedule.add(new Music(tmp, "null", tmp3, tmp1, tmp6, tmp2, dataid, "true", tmp4, getResources().getString(R.string.savedmusic), add_hash, del_hash, "null"));
+                    if (listsavemusic.contains(dataid + ".mp3"))
+                        music_schedule.add(new Music(tmp, "null", tmp3, tmp1, tmp6, tmp2, dataid, "true", tmp4, getResources().getString(R.string.savedmusic), add_hash, del_hash, "null"));
                 }
             }
         } catch (FileNotFoundException e) {
@@ -310,7 +310,7 @@ public class Audio_list_fragment_save extends Fragment {
 
         scheduleSaved = getMusicInfo();
 
-        Log.i("TestViewRVSaveMusic", "getMusic: "+Integer.toString(scheduleSaved.getPlaylist().size()));
+        Log.i("TestViewRVSaveMusic", "getMusic: " + scheduleSaved.getPlaylist().size());
 
         RefreshRV();
 

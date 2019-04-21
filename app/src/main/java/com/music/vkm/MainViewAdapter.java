@@ -10,6 +10,7 @@ import java.util.ArrayList;
 public class MainViewAdapter extends FragmentPagerAdapter {
     private ArrayList<Fragment> fragmentArrayList = new ArrayList<>();
     private ArrayList<String> titleArrayList = new ArrayList<>();
+
     public MainViewAdapter(FragmentManager fm) {
         super(fm);
     }

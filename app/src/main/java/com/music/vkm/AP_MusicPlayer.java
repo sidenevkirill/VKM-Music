@@ -48,7 +48,7 @@ public class AP_MusicPlayer extends Fragment {
         @Override
         public void run() {
             if (MusicService.mediaPlayer != null) {
-                setSeek((int) MusicService.mediaPlayer.getCurrentPosition(), (int) MusicService.secondary);
+                setSeek(MusicService.mediaPlayer.getCurrentPosition(), MusicService.secondary);
             }
             handler.postDelayed(this, 1000);
         }
@@ -247,7 +247,7 @@ public class AP_MusicPlayer extends Fragment {
             new_settings.setOnClickListener(settings);
 
 
-            final ImageButton new_add = (ImageButton) getActivity().findViewById(R.id.new_add);
+            final ImageButton new_add = getActivity().findViewById(R.id.new_add);
 
 
             View.OnClickListener addSong = new View.OnClickListener() {
@@ -332,7 +332,7 @@ public class AP_MusicPlayer extends Fragment {
             getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    final SeekBar aplayer_progress = (SeekBar) getActivity().findViewById(R.id.new_seekbar);
+                    final SeekBar aplayer_progress = getActivity().findViewById(R.id.new_seekbar);
 
                     if (work) {
                         aplayer_progress.setThumb(getResources().getDrawable(android.R.drawable.screen_background_light_transparent));
@@ -358,13 +358,13 @@ public class AP_MusicPlayer extends Fragment {
                         } else {
                             setLoading(false);
                         }
-                        final SeekBar aplayer_progress = (SeekBar) view.findViewById(R.id.new_seekbar);
-                        TextView aplayer_title = (TextView) view.findViewById(R.id.new_title);
-                        TextView aplayer_artist = (TextView) view.findViewById(R.id.new_artist);
-                        TextView aplayer_duration = (TextView) view.findViewById(R.id.new_duration);
+                        final SeekBar aplayer_progress = view.findViewById(R.id.new_seekbar);
+                        TextView aplayer_title = view.findViewById(R.id.new_title);
+                        TextView aplayer_artist = view.findViewById(R.id.new_artist);
+                        TextView aplayer_duration = view.findViewById(R.id.new_duration);
 
 
-                        final ImageButton start = (ImageButton) view.findViewById(R.id.new_play_pause);
+                        final ImageButton start = view.findViewById(R.id.new_play_pause);
 
                         Integer time = Integer.parseInt(intent.getStringExtra("duration"));
                         aplayer_duration.setText(wstr.millisecondsToTime(time));

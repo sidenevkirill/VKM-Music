@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -44,8 +43,8 @@ public class AdapterPlaylists extends RecyclerView.Adapter<com.music.vkm.Adapter
 
         HistViewHolder(final View itemView) {
             super(itemView);
-            cover = (ImageView) itemView.findViewById(R.id.cover);
-            title = (TextView) itemView.findViewById(R.id.title);
+            cover = itemView.findViewById(R.id.cover);
+            title = itemView.findViewById(R.id.title);
             rl = itemView.findViewById(R.id.rv_cover);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -110,7 +109,7 @@ public class AdapterPlaylists extends RecyclerView.Adapter<com.music.vkm.Adapter
             public void onClick(View v) {
 
                 Intent intent = new Intent(view.getContext(), PlayList_View.class);
-                intent.putExtra("playlist", (Serializable) playLists.get(i));
+                intent.putExtra("playlist", playLists.get(i));
                 v.getContext().startActivity(intent);
 
             }

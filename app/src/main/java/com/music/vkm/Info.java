@@ -1,22 +1,15 @@
 package com.music.vkm;
 
-import android.content.ClipData;
-import android.content.ClipboardManager;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
 import com.anjlab.android.iab.v3.BillingProcessor;
-import com.anjlab.android.iab.v3.TransactionDetails;
-import com.github.bluzwong.swipeback.SwipeBackActivityHelper;
 
 
 public class Info extends AppCompatActivity {
@@ -30,7 +23,7 @@ public class Info extends AppCompatActivity {
         setContentView(R.layout.info_view);
 
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_settings);
+        Toolbar toolbar = findViewById(R.id.toolbar_settings);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(getResources().getString(R.string.about));
         toolbar.setTitleTextColor(Color.parseColor("#000000"));

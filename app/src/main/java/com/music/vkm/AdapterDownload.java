@@ -33,7 +33,6 @@ public class AdapterDownload extends RecyclerView.Adapter<AdapterDownload.HistVi
     }
 
 
-
     public void setOnItemClickListener(AdapterMusic.OnItemClickListener listener) {
         this.listener = listener;
     }
@@ -51,12 +50,12 @@ public class AdapterDownload extends RecyclerView.Adapter<AdapterDownload.HistVi
 
         HistViewHolder(View itemView) {
             super(itemView);
-            download = (ImageView) itemView.findViewById(R.id.playlist_saved_icon);
-            pic = (ImageView) itemView.findViewById(R.id.pic);
-            artist = (TextView) itemView.findViewById(R.id.artist);
-            title = (TextView) itemView.findViewById(R.id.title);
-            CheckBox = (CheckBox) itemView.findViewById(R.id.chbox_download);
-            cv = (CardView) itemView.findViewById(R.id.cv);
+            download = itemView.findViewById(R.id.playlist_saved_icon);
+            pic = itemView.findViewById(R.id.pic);
+            artist = itemView.findViewById(R.id.artist);
+            title = itemView.findViewById(R.id.title);
+            CheckBox = itemView.findViewById(R.id.chbox_download);
+            cv = itemView.findViewById(R.id.cv);
 
         }
     }
@@ -96,7 +95,6 @@ public class AdapterDownload extends RecyclerView.Adapter<AdapterDownload.HistVi
         }
 
 
-
         if (!musicList.get(i).getPic().equals("none")) {
             Picasso.with(mContext)
                     .load(musicList.get(i).getPic())
@@ -121,7 +119,7 @@ public class AdapterDownload extends RecyclerView.Adapter<AdapterDownload.HistVi
                     histViewHolder.CheckBox.setChecked(false);
 
                     if (listfordownload.contains(musicList.get(i))) {
-                        listfordownload.remove(listfordownload.indexOf(musicList.get(i)));
+                        listfordownload.remove(musicList.get(i));
                     }
                 }
             }
@@ -139,7 +137,7 @@ public class AdapterDownload extends RecyclerView.Adapter<AdapterDownload.HistVi
             } else {
 
                 if (listfordownload.contains(musicList.get(i))) {
-                    listfordownload.remove(listfordownload.indexOf(musicList.get(i)));
+                    listfordownload.remove(musicList.get(i));
                 }
                 histViewHolder.CheckBox.setChecked(false);
             }

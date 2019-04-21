@@ -1,7 +1,6 @@
 package com.music.vkm;
 
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -300,7 +299,7 @@ public class PlayList_View extends AppCompatActivity {
             public void onReceive(Context context, Intent intent) {
                 if (intent.getAction().equals("com.mascotworld.vkaudiomanager.send")) {
 
-                    ImageView start = (ImageView) findViewById(R.id.audio_panel_play);
+                    ImageView start = findViewById(R.id.audio_panel_play);
                     if (MusicService.mediaPlayer != null)
                         if (MusicService.isPlaying) {
                             start.setImageDrawable(getResources().getDrawable(R.drawable.ic_pause_24dp));
@@ -356,7 +355,7 @@ public class PlayList_View extends AppCompatActivity {
             public void onReceive(Context context, Intent intent) {
                 if (intent.getAction().equals("com.mascotworld.vkaudiomanager.sendseek")) {
 
-                    ProgressBar audio_panel_progress = (ProgressBar) findViewById(R.id.audio_panel_progress);
+                    ProgressBar audio_panel_progress = findViewById(R.id.audio_panel_progress);
 
                     audio_panel_progress.setProgress(Integer.parseInt(intent.getStringExtra("seek")));
                     audio_panel_progress.setSecondaryProgress(Integer.parseInt(intent.getStringExtra("sseek")));
@@ -402,7 +401,7 @@ public class PlayList_View extends AppCompatActivity {
 
         listenSheet();
 
-        ImageView audio_panel_play = (ImageView) findViewById(R.id.audio_panel_play);
+        ImageView audio_panel_play = findViewById(R.id.audio_panel_play);
 
         View.OnClickListener ActionPlayPause = new View.OnClickListener() {
             @Override
@@ -415,7 +414,7 @@ public class PlayList_View extends AppCompatActivity {
 
         audio_panel_play.setOnClickListener(ActionPlayPause);
 
-        ImageView audio_panel_prev = (ImageView) findViewById(R.id.audio_panel_prev);
+        ImageView audio_panel_prev = findViewById(R.id.audio_panel_prev);
 
         View.OnClickListener ActionPrev = new View.OnClickListener() {
             @Override
@@ -428,7 +427,7 @@ public class PlayList_View extends AppCompatActivity {
 
         audio_panel_prev.setOnClickListener(ActionPrev);
 
-        ImageView audio_panel_next = (ImageView) findViewById(R.id.audio_panel_next);
+        ImageView audio_panel_next = findViewById(R.id.audio_panel_next);
 
         View.OnClickListener ActionNext = new View.OnClickListener() {
             @Override
@@ -441,7 +440,7 @@ public class PlayList_View extends AppCompatActivity {
 
         audio_panel_next.setOnClickListener(ActionNext);
 
-        FrameLayout bottomSheetLayout = (FrameLayout) findViewById(R.id.layout_bottom_sheet);
+        FrameLayout bottomSheetLayout = findViewById(R.id.layout_bottom_sheet);
 
         View.OnClickListener OpenPlayer = new View.OnClickListener() {
             @Override
@@ -458,7 +457,7 @@ public class PlayList_View extends AppCompatActivity {
 
 
     void loadFullMusic() {
-        if (!((Activity) PlayList_View.this).isFinishing()) {
+        if (!PlayList_View.this.isFinishing()) {
 
 
             Message message = loadFull.obtainMessage(1, "Asd");
@@ -480,7 +479,7 @@ public class PlayList_View extends AppCompatActivity {
 
 
                     if (!isLoading) {
-                        Log.d("ParsPlaylist", "onScrollChange: " + Integer.toString(totalItemCount));
+                        Log.d("ParsPlaylist", "onScrollChange: " + totalItemCount);
 
                         isLoading = true;
                         getFullMusic();
@@ -706,7 +705,7 @@ public class PlayList_View extends AppCompatActivity {
                     .addHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8")
                     .addHeader("User-Agent", loadText("userAgent"))
                     .addHeader("Cookie", loadText("sid") + "; remixmdevice=1366/768/1/!!-!!!!")
-                    .url(playList.getUrl() + "&offset=" + Integer.toString(llm.getItemCount()))
+                    .url(playList.getUrl() + "&offset=" + llm.getItemCount())
                     .build();
 
             client.newCall(request).enqueue(new Callback() {
@@ -806,7 +805,7 @@ public class PlayList_View extends AppCompatActivity {
         }
 
         if (allowed) {
-             mBoundService.cacheMusic(tmpmusic);
+            mBoundService.cacheMusic(tmpmusic);
         } else {
             // we will give warning to user that they haven't granted permissions.
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

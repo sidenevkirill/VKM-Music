@@ -264,7 +264,6 @@ public class AP_PlayList extends Fragment {
                         ItemTouchHelper.LEFT) {
 
 
-
                     @Override
                     public boolean onMove(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder,
                                           RecyclerView.ViewHolder target) {

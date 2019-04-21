@@ -220,11 +220,11 @@ public class AdapterMusic extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
 
-        Log.d("notifyDataSetChanged", "position: " + Integer.toString(musicList.size()));
+        Log.d("notifyDataSetChanged", "position: " + musicList.size());
 
         switch (holder.getItemViewType()) {
             case 0: {
-                Log.d(TAG, "playList size: " + Integer.toString(playLists.size()));
+                Log.d(TAG, "playList size: " + playLists.size());
                 if (type == 4) {
                     PlayListViewHolder playListViewHolder = (PlayListViewHolder) holder;
 
@@ -254,7 +254,7 @@ public class AdapterMusic extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
                 int i;
                 if (type == 5)
                     i = position;
-                else i = position-1;
+                else i = position - 1;
 
                 if (i < musicList.size()) {
                     musicViewHolder.title.setText(wstr.normalizeString(musicList.get(i).getTitle()));
@@ -356,10 +356,6 @@ public class AdapterMusic extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             }
         };
     }
-
-
-
-
 
 
 }

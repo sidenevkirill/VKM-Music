@@ -30,8 +30,6 @@ public class Download_Activity extends AppCompatActivity {
     private AdView mAdView;
 
 
-
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.download_activity);
@@ -110,11 +108,10 @@ public class Download_Activity extends AppCompatActivity {
             public void onClick(View view) {
 
 
-
                 if (adapter.getCountChecked() > 0) {
 
                     if (type.equals("full")) {
-                       Audio_main_activity.mBoundService.downloadListMusic(adapter.getDownloadList(), 2);
+                        Audio_main_activity.mBoundService.downloadListMusic(adapter.getDownloadList(), 2);
                     } else {
                         Audio_main_activity.mBoundService.downloadListMusic(adapter.getDownloadList(), 1);
                     }
@@ -133,7 +130,6 @@ public class Download_Activity extends AppCompatActivity {
     }
 
 
-
     void saveText(String saved_text, String save) {
         sPref = getSharedPreferences(Settings.SPreferences, MODE_PRIVATE);
         SharedPreferences.Editor ed = sPref.edit();
@@ -146,8 +142,6 @@ public class Download_Activity extends AppCompatActivity {
         String savedText = sPref.getString(saved_text, "");
         return savedText;
     }
-
-
 
 
 }

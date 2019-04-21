@@ -1,11 +1,11 @@
 package com.music.vkm;
 
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.PopupMenu;
@@ -47,7 +47,7 @@ public class Audio_list_fragment_groups extends Fragment {
         recMusic.setNestedScrollingEnabled(true);
 
 
-        final AdapterMusic adapter = new AdapterMusic(list,new ArrayList<PlayList>(),3);
+        final AdapterMusic adapter = new AdapterMusic(list, new ArrayList<PlayList>(), 3);
         adapter.setOnItemClickListener(new AdapterMusic.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
@@ -63,8 +63,7 @@ public class Audio_list_fragment_groups extends Fragment {
 
         adapter.setOnMenuClickListener(new AdapterMusic.OnMenuClickListener() {
             @Override
-            public void onItemClick(View itemView,final int position) {
-
+            public void onItemClick(View itemView, final int position) {
 
 
                 final PopupMenu popup = new PopupMenu(getActivity(), itemView);
@@ -88,28 +87,27 @@ public class Audio_list_fragment_groups extends Fragment {
                     public boolean onMenuItemClick(MenuItem item) {
 
                         if (item.getTitle().toString().equals(getActivity().getResources().getString(R.string.save))) {
-                          //  mBoundService.cacheMusic(adapter.getList().get(position));
+                            //  mBoundService.cacheMusic(adapter.getList().get(position));
                         }
                         if (item.getTitle().toString().equals(getActivity().getResources().getString(R.string.delete))) {
                             item.setTitle(getActivity().getResources().getString(R.string.add));
-                         //  mBoundService.controlMusic(adapter.getList().get(position));
+                            //  mBoundService.controlMusic(adapter.getList().get(position));
                         }
                         if (item.getTitle().toString().equals(getActivity().getResources().getString(R.string.add))) {
                             item.setTitle(getActivity().getResources().getString(R.string.delete));
-                        //    mBoundService.controlMusic(adapter.getList().get(position));
+                            //    mBoundService.controlMusic(adapter.getList().get(position));
                         }
                         if (item.getTitle().toString().equals(getActivity().getResources().getString(R.string.findartist))) {
                             searchMenuItem.expandActionView();
                             searchView.setQuery(adapter.getList().get(position).getArtist(), true);
                         }
                         if (getActivity() != null)
-                        if (item.getTitle().toString().equals(getActivity().getResources().getString(R.string.downloadmusic))) {
-                        //   mBoundService.downloadMusic(adapter.getList().get(position));
-                        }
+                            if (item.getTitle().toString().equals(getActivity().getResources().getString(R.string.downloadmusic))) {
+                                //   mBoundService.downloadMusic(adapter.getList().get(position));
+                            }
                         return true;
                     }
                 });
-
 
 
             }
@@ -126,10 +124,6 @@ public class Audio_list_fragment_groups extends Fragment {
                     MusicService.getSchedule().shuffle();
 
 
-
-
-
-
                 } else {
                     Snackbar.make(view, getResources().getString(R.string.notavailable), Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
@@ -137,7 +131,7 @@ public class Audio_list_fragment_groups extends Fragment {
 
             }
         });
-       // recMusic.setAdapter(adapter);
+        // recMusic.setAdapter(adapter);
 
 
 

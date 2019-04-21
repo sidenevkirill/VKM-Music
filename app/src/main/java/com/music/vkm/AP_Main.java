@@ -45,7 +45,6 @@ public class AP_Main extends AppCompatActivity {
     }
 
 
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -71,12 +70,7 @@ public class AP_Main extends AppCompatActivity {
 
         RelativeLayout close_ap_act = findViewById(R.id.close_ap_act);
 
-        View.OnClickListener close = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        };
+        View.OnClickListener close = v -> finish();
 
         close_ap_act.setOnClickListener(close);
 
@@ -131,7 +125,7 @@ public class AP_Main extends AppCompatActivity {
 
         pager.setCurrentItem(1);
 
-        final ImageButton new_shuffle = (ImageButton) findViewById(R.id.new_shuffle);
+        final ImageButton new_shuffle = findViewById(R.id.new_shuffle);
 
         if (MusicService.getSchedule().isShuffle()) {
 
@@ -156,7 +150,7 @@ public class AP_Main extends AppCompatActivity {
         new_shuffle.setOnClickListener(Actionshuffle);
 
 
-        final ImageButton new_repeat = (ImageButton) findViewById(R.id.new_repeat);
+        final ImageButton new_repeat = findViewById(R.id.new_repeat);
         if (MusicService.loop) {
             new_repeat.setColorFilter(getResources().getColor(R.color.colorPrimary), android.graphics.PorterDuff.Mode.MULTIPLY);
         } else {
@@ -183,14 +177,10 @@ public class AP_Main extends AppCompatActivity {
     }
 
 
-
     void MusicLoop() {
 
         mBoundService.MusicLoop();
     }
-
-
-
 
 
 }

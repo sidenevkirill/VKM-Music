@@ -547,7 +547,7 @@ public class Audio_list_fragment_recommendations extends Fragment {
                             del_hash = music.get(13).toString();
                             del_hash = del_hash.substring(del_hash.indexOf("/") + 2, del_hash.length() - 2);
                             String tmp = music.get(13).toString();
-                            Log.d(TAG, "SUKA"+tmp);
+                            Log.d(TAG, "SUKA" + tmp);
                            /* if (tmp.contains("//")) {
                                 tmp = tmp.replaceAll("//", "/");
                             }
@@ -555,11 +555,11 @@ public class Audio_list_fragment_recommendations extends Fragment {
                             tmp = tmp.substring(tmp.lastIndexOf("/") + 1);*/
                             int countThe = StringUtils.countMatches(tmp, "//");
                             String str = tmp;
-                            if (countThe > 1){
+                            if (countThe > 1) {
                                 int position = str.indexOf("//");
-                                str = wstr.removeCharAt(str,position);
+                                str = wstr.removeCharAt(str, position);
                             }
-                            del_hash  = wstr.pars("///", str, "/");
+                            del_hash = wstr.pars("///", str, "/");
 
                             res_hash = res_hash.substring(add_hash.length() + 1);
                             res_hash = wstr.pars("/", res_hash, "/");

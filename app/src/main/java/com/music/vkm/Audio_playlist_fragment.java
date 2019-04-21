@@ -1,6 +1,5 @@
 package com.music.vkm;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
@@ -153,12 +152,12 @@ public class Audio_playlist_fragment extends Fragment {
                         }
                         if (item.getTitle().toString().equals(getResources().getString(R.string.delete))) {
                             item.setTitle(getResources().getString(R.string.add));
-                           // mBoundService.controlMusic(MusicServiceOld.getSchedule().getCurrentMusic());
+                            // mBoundService.controlMusic(MusicServiceOld.getSchedule().getCurrentMusic());
                             return true;
                         }
                         if (item.getTitle().toString().equals(getResources().getString(R.string.add))) {
                             item.setTitle(getResources().getString(R.string.delete));
-                          //  mBoundService.controlMusic(MusicServiceOld.getSchedule().getCurrentMusic());
+                            //  mBoundService.controlMusic(MusicServiceOld.getSchedule().getCurrentMusic());
                             return true;
                         }
                         if (item.getTitle().toString().equals(getResources().getString(R.string.findartist))) {
@@ -171,7 +170,7 @@ public class Audio_playlist_fragment extends Fragment {
 
                         }
                         if (item.getTitle().toString().equals(getResources().getString(R.string.downloadmusic))) {
-                           // mBoundService.downloadMusic(MusicServiceOld.getSchedule().getCurrentMusic());
+                            // mBoundService.downloadMusic(MusicServiceOld.getSchedule().getCurrentMusic());
                         }
                         return true;
                     }
@@ -185,7 +184,6 @@ public class Audio_playlist_fragment extends Fragment {
         playlist.setAdapter(adapter);
 
         getInfo();
-
 
 
         return v;
@@ -230,7 +228,7 @@ public class Audio_playlist_fragment extends Fragment {
         }
 //todo
         if (allowed) {
-         //   mBoundService.cacheMusic(tmpmusic);
+            //   mBoundService.cacheMusic(tmpmusic);
         } else {
             // we will give warning to user that they haven't granted permissions.
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -268,7 +266,7 @@ public class Audio_playlist_fragment extends Fragment {
 
 
     void loadFullMusic() {
-        if (!((Activity) getActivity()).isFinishing()) {
+        if (!getActivity().isFinishing()) {
 
 
             Message message = loadFull.obtainMessage(1, "Asd");
@@ -290,7 +288,7 @@ public class Audio_playlist_fragment extends Fragment {
 
 
                     if (!isLoading) {
-                        Log.d("ParsPlaylist", "onScrollChange: " + Integer.toString(totalItemCount));
+                        Log.d("ParsPlaylist", "onScrollChange: " + totalItemCount);
 
                         isLoading = true;
                         getFullMusic();
@@ -492,7 +490,7 @@ public class Audio_playlist_fragment extends Fragment {
                     .addHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8")
                     .addHeader("User-Agent", loadText("userAgent"))
                     .addHeader("Cookie", loadText("sid") + "; remixmdevice=1366/768/1/!!-!!!!")
-                    .url(playList.getUrl() + "&offset=" + Integer.toString(llm.getItemCount()))
+                    .url(playList.getUrl() + "&offset=" + llm.getItemCount())
                     .build();
 
             client.newCall(request).enqueue(new Callback() {

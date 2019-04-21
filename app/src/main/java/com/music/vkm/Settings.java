@@ -1,7 +1,5 @@
 package com.music.vkm;
 
-import android.app.SearchManager;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,18 +7,10 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.preference.Preference;
-import android.preference.PreferenceManager;
-import android.preference.SwitchPreference;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -36,10 +26,6 @@ import net.rdrei.android.dirchooser.DirectoryChooserConfig;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-
-
-import static com.ironsource.mediationsdk.IronSource.showInterstitial;
-import static com.unity3d.ads.properties.ClientProperties.getActivity;
 
 /**
  * Created by mascot on 04.10.2017.
@@ -67,7 +53,7 @@ public class Settings extends AppCompatActivity {
                 .setParallaxRatio(3)
                 .setNeedBackgroundShadow(true)
                 .init(this);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_settings);
+        Toolbar toolbar = findViewById(R.id.toolbar_settings);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(getResources().getString(R.string.settings));
         toolbar.setTitleTextColor(Color.parseColor("#000000"));
@@ -80,8 +66,7 @@ public class Settings extends AppCompatActivity {
         });
 
 
-
-        final CheckBox chbox2 = (CheckBox) findViewById(R.id.chbox2);
+        final CheckBox chbox2 = findViewById(R.id.chbox2);
         if (loadText("design").equals("new")) {
             chbox2.setChecked(false);
         } else {
@@ -110,8 +95,7 @@ public class Settings extends AppCompatActivity {
         chbox2.setOnClickListener(chbox2click);
 
 
-
-        final CheckBox chbox1 = (CheckBox) findViewById(R.id.chbox1);
+        final CheckBox chbox1 = findViewById(R.id.chbox1);
         String smAll = loadText("smAll");
         if (smAll.equals("true")) {
             chbox1.setChecked(true);
@@ -135,7 +119,7 @@ public class Settings extends AppCompatActivity {
         chbox1.setOnClickListener(chbox1click);
 
 
-        final CheckBox chbox3 = (CheckBox) findViewById(R.id.chbox3);
+        final CheckBox chbox3 = findViewById(R.id.chbox3);
         if (loadText("savedata").equals("true")) {
             chbox3.setChecked(true);
         } else {
@@ -363,18 +347,17 @@ public class Settings extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         File output = new File(loadText("pathCache"));
-                        for(File file: output.listFiles())
+                        for (File file : output.listFiles())
                             if (!file.isDirectory())
                                 file.delete();
 
-                        Toast.makeText(getApplicationContext(),getString(R.string.done),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), getString(R.string.done), Toast.LENGTH_SHORT).show();
                     }
                 });
-                builder.setNegativeButton(getString(R.string.cancel),null);
+                builder.setNegativeButton(getString(R.string.cancel), null);
                 builder.show();
             }
         });
-
 
 
         Button load_old = findViewById(R.id.audio_load);
@@ -447,7 +430,6 @@ public class Settings extends AppCompatActivity {
         });
 
 
-
         CheckBox watch_ad = findViewById(R.id.watch_ad);
 
         if (loadText("watch_ad").equals("true")) {
@@ -474,10 +456,6 @@ public class Settings extends AppCompatActivity {
         Intent intent = new Intent(new Intent(Intent.ACTION_VIEW, Uri.parse("http://vk.com/wtfmu")));
         startActivityForResult(intent, 1);
     }
-
-
-
-
 
 
     private List<String> getListMusic(String localpath) {

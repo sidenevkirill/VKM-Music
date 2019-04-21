@@ -64,9 +64,9 @@ public class Audio_list_fragment_popular extends Fragment {
         view = v;
 
 
-        mSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipeRefreshLayout);
+        mSwipeRefreshLayout = view.findViewById(R.id.swipeRefreshLayout);
 
-        RecyclerView recMusic = (RecyclerView) view.findViewById(R.id.rv_fragment);
+        RecyclerView recMusic = view.findViewById(R.id.rv_fragment);
 
         LinearLayoutManager llm = new LinearLayoutManager(view.getContext());
 
@@ -394,7 +394,7 @@ public class Audio_list_fragment_popular extends Fragment {
                 public void run() {
                     RecyclerView recMusic = view.findViewById(R.id.rv_fragment);
                     recMusic.getAdapter().notifyDataSetChanged();
-                    Log.d("UpdateRV", "run: " + Integer.toString(schedule.size()));
+                    Log.d("UpdateRV", "run: " + schedule.size());
 
                     TextView info = view.findViewById(R.id.info);
                     if (schedule.size() > 0) {
@@ -505,7 +505,7 @@ public class Audio_list_fragment_popular extends Fragment {
                         getActivity().runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                RecyclerView recMusic = (RecyclerView) view.findViewById(R.id.rv_fragment);
+                                RecyclerView recMusic = view.findViewById(R.id.rv_fragment);
                                 recMusic.getAdapter().notifyDataSetChanged();
                                 mSwipeRefreshLayout.setRefreshing(false);
                               /*  FrameLayout block_info = (FrameLayout) view.findViewById(R.id.block_info);
@@ -636,7 +636,7 @@ public class Audio_list_fragment_popular extends Fragment {
         }
 
         if (allowed) {
-             mBoundService.cacheMusic(tmpmusic);
+            mBoundService.cacheMusic(tmpmusic);
         } else {
             // we will give warning to user that they haven't granted permissions.
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {

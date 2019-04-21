@@ -59,7 +59,7 @@ public class Log_In_2fa extends AppCompatActivity {
             }
         };
 
-       final Button next = findViewById(R.id.next);
+        final Button next = findViewById(R.id.next);
         next.setOnClickListener(entercode);
 
         TextInputEditText code1 = findViewById(R.id.code1);

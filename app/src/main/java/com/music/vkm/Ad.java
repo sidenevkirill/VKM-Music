@@ -124,7 +124,7 @@ public class Ad extends AppCompatActivity {
                     Appodeal.initialize(this, appKey, Appodeal.MREC);
 
 
-                } else{
+                } else {
                     Appodeal.initialize(this, appKey, Appodeal.REWARDED_VIDEO);
 
                     Appodeal.setRewardedVideoCallbacks(new RewardedVideoCallbacks() {

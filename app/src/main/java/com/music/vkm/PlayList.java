@@ -6,7 +6,7 @@ import java.io.Serializable;
  * Created by halez on 06.01.2018.
  */
 
-public class PlayList implements Serializable{
+public class PlayList implements Serializable {
 
     private String url;
     private String itemTitle;
@@ -14,8 +14,6 @@ public class PlayList implements Serializable{
 
     PlayList() {
     }
-
-    ;
 
     PlayList(String url, String itemTitle, String itemCover) {
         this.url = url;

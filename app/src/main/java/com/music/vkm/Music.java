@@ -27,7 +27,7 @@ public class Music implements Serializable {
     }
 
     public void setName_cache(String name_cache) {
-        name_cache = name_cache.replaceAll("Info","mp3");
+        name_cache = name_cache.replaceAll("Info", "mp3");
         this.name_cache = name_cache;
     }
 
@@ -63,8 +63,6 @@ public class Music implements Serializable {
         this.del_hash = del_hash;
         this.res_hash = res_hash;
     }
-
-
 
 
     void unSave() {

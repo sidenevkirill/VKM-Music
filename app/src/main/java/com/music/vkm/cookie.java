@@ -26,9 +26,9 @@ public class cookie implements Parcelable {
         i++;
     }
 
-    String getCookieinLine(){
+    String getCookieinLine() {
         StringBuilder tmp = new StringBuilder();
-        for (itmp = 0;itmp < i;itmp++){
+        for (itmp = 0; itmp < i; itmp++) {
             tmp.append(cookarr[itmp]).append(";");
         }
         return tmp.toString();
@@ -38,7 +38,7 @@ public class cookie implements Parcelable {
         cookarr[tmp] = tmpstr;
     }
 
-    String getCookie(int tmp){
+    String getCookie(int tmp) {
         return cookarr[tmp];
     }
 

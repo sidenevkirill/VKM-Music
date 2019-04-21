@@ -30,38 +30,32 @@ public class NotificationService extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
 
-        String week = loadText("LAST_LAUNCH_WEEK",context);
-        if (week.equals(""))
-        {
+        String week = loadText("LAST_LAUNCH_WEEK", context);
+        if (week.equals("")) {
             week = "0";
-            saveText("watch_ad","true",context);
-            saveText("LAST_LAUNCH_WEEK", new SimpleDateFormat("dd", Locale.US).format(new Date()),context);
+            saveText("watch_ad", "true", context);
+            saveText("LAST_LAUNCH_WEEK", new SimpleDateFormat("dd", Locale.US).format(new Date()), context);
         }
         String now = new SimpleDateFormat("dd", Locale.US).format(new Date());
-
 
 
         int weekch = Integer.parseInt(week);
         int nowch = Integer.parseInt(now);
 
-        if ((weekch - nowch) < -6){
-            saveText("watch_ad","true",context);
-            saveText("LAST_LAUNCH_WEEK", new SimpleDateFormat("dd", Locale.US).format(new Date()),context);
+        if ((weekch - nowch) < -6) {
+            saveText("watch_ad", "true", context);
+            saveText("LAST_LAUNCH_WEEK", new SimpleDateFormat("dd", Locale.US).format(new Date()), context);
         }
 
 
-
-
-
-
-        if (loadText("LAST_LAUNCH_DATE",context).equals(new SimpleDateFormat("yyyy/MM/dd", Locale.US).format(new Date()))) {
-            if (loadText("advertisiment",context).equals("true"))
+        if (loadText("LAST_LAUNCH_DATE", context).equals(new SimpleDateFormat("yyyy/MM/dd", Locale.US).format(new Date()))) {
+            if (loadText("advertisiment", context).equals("true"))
                 createNotification(context);
             Log.d("TestFirstLaunch", "it's not a first");
         } else {
-            if (loadText("watch_ad",context).equals("true")) {
-                if (loadText("advertisiment",context).equals("true")) {
-                    if (loadText("first_open",context).equals("false")) {
+            if (loadText("watch_ad", context).equals("true")) {
+                if (loadText("advertisiment", context).equals("true")) {
+                    if (loadText("first_open", context).equals("false")) {
                         Toast.makeText(context, "В настройках вы можете выключить просмотр рекламы раз в день.", Toast.LENGTH_LONG).show();
                         Intent intent1 = new Intent(context, Ad.class);
                         intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -72,7 +66,7 @@ public class NotificationService extends BroadcastReceiver {
 
 
             Log.d("TestFirstLaunch", "it's first");
-            saveText("LAST_LAUNCH_DATE", new SimpleDateFormat("yyyy/MM/dd", Locale.US).format(new Date()),context);
+            saveText("LAST_LAUNCH_DATE", new SimpleDateFormat("yyyy/MM/dd", Locale.US).format(new Date()), context);
         }
 
 

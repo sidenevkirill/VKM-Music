@@ -486,10 +486,9 @@ public class Audio_list_fragment_my extends Fragment {
                         tmp = respons;
 
 
-
                         while (tmp.contains("<div class=\"audioPlaylistsPage")) {
                             tmp1 = wstr.pars("<div class=\"audioPlaylistsPage__cell audioPlaylistsPage__cell_link\">", tmp, "<div class=\"wi_actions_wrap\">");
-                            Log.i("TestParsPlaylists", "onResponse: "+tmp1);
+                            Log.i("TestParsPlaylists", "onResponse: " + tmp1);
                             String url, itemTitle, itemCover;
 
                             url = "https://m.vk.com" + wstr.pars("<a href=\"", tmp1, "\"");
@@ -524,7 +523,7 @@ public class Audio_list_fragment_my extends Fragment {
         mSwipeRefreshLayout = view.findViewById(R.id.swipeRefreshLayout);
 
 
-        Log.d(TAG, "getMusicNew: " + Integer.toString(schedule.size()));
+        Log.d(TAG, "getMusicNew: " + schedule.size());
 
         OkHttpClient client = new OkHttpClient().newBuilder()
                 .followRedirects(false)
@@ -750,7 +749,7 @@ public class Audio_list_fragment_my extends Fragment {
             getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    Log.d("UpdateRV", "list: " + Integer.toString(schedule.size()) + "playLists: " + Integer.toString(playLists.size()));
+                    Log.d("UpdateRV", "list: " + schedule.size() + "playLists: " + playLists.size());
                     switch (type) {
                         case 1: {
                             mSwipeRefreshLayout.setRefreshing(false);

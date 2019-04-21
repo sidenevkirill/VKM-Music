@@ -59,7 +59,7 @@ public class NotificationGenerator {
         Intent notifyIntent;
 
         notifyIntent = new Intent(context, Audio_main_activity.class);
-        notifyIntent.putExtra("open","true");
+        notifyIntent.putExtra("open", "true");
 
         notifyIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT);
